@@ -1,29 +1,20 @@
-import FeatureComponent from '@/components/features/FeatureComponent'
-import TranslationsProvider from './TranslationsProvider';
-import initTranslations from '../i18n'
+import Header from "@/components/layout/Home/Header";
+import Raised from "@/components/layout/Home/Raised";
+import Welcome from "@/components/layout/Home/Welcome";
+import { Flex } from "@chakra-ui/react";
 
-const i18nNamespaces = ['common'];
-
-interface HomeProps {
-  params: {
-    locale: string;
-  };
-}
-
-
-export default async function Home({ params: { locale } }: HomeProps) {
-  const { resources } = await initTranslations(locale, i18nNamespaces)
+export default async function Home() {
 
   return (
-    <TranslationsProvider
-      namespaces={i18nNamespaces}
-      locale={locale}
-      resources={resources}
+    <Flex
+      direction="column"
+      paddingX={{ base: 2, md: 4 }}
+      paddingY={{ base: 8, md: 4 }}
+      gap={{ base: 8, md: "120px" }}
     >
-      <main>
-        <h1>Welcome to My Next.js App</h1>
-        <FeatureComponent />
-      </main>
-    </TranslationsProvider>
+      <Header />
+      <Welcome />
+      <Raised />
+    </Flex>
   )
 }

@@ -1,13 +1,23 @@
 'use client'
 
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { motion, AnimatePresence } from 'framer-motion'
+
+const theme = extendTheme({
+    fonts: {
+        heading: 'var(--font-lato)',
+        body: 'var(--font-lato)',
+    },
+})
 
 export function Providers({ children }: { children: React.ReactNode }) {
     return (
         <CacheProvider>
-            <ChakraProvider>
-                {children}
+            <ChakraProvider theme={theme}>
+                <AnimatePresence mode='wait'>
+                    {children}
+                </AnimatePresence>
             </ChakraProvider>
         </CacheProvider>
     )
