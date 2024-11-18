@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/layout/Navbar";
 import { Lato } from 'next/font/google';
+import Footer from "@/components/layout/Footer";
 
 const lato = Lato({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
