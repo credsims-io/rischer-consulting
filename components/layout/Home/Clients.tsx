@@ -5,7 +5,7 @@ export default function Clients() {
     return (
         <Flex
             direction="column"
-            paddingX={{ base: "10px", md: "115px" }}
+            paddingX={{ base: "10px", md: "60px", lg: "115px" }}
             paddingBottom={{ base: 8, md: 16 }}
         >
             <Text

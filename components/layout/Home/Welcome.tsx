@@ -5,7 +5,7 @@ export default function Welcome() {
     return (
         <Flex
             direction={{ base: "column", lg: "row" }}
-            paddingX={{ base: "10px", md: "115px" }}
+            paddingX={{ base: "10px", md: "60px", lg: "115px" }}
             gap={{ base: 10, md: 16 }}
             justify="space-between"
             mx="auto"

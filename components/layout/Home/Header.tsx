@@ -9,7 +9,7 @@ export default function Header() {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             align={{ base: "start", md: "center" }}
-            paddingX={{ base: "10px", md: "115px" }}
+            paddingX={{ base: "10px", md: "60px", lg: "115px" }}
             height={{ base: "560px", md: "642px" }}
             rounded={{ base: "16px", md: "24px" }}
             position="relative"

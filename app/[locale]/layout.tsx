@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import Navbar from "@/components/layout/Navbar";
 import { Lato } from 'next/font/google';
 import Footer from "@/components/layout/Footer";
+import PictureTopbar from "@/components/layout/Home/PictureTopbar";
 
 const lato = Lato({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${lato.variable} font-lato`}>
         <Providers>
           <Navbar />
+          <PictureTopbar />
           {children}
           <Footer />
         </Providers>
