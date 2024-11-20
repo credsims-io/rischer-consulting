@@ -7,7 +7,7 @@ export default function page() {
             direction="column"
             paddingX={{ base: "10px", md: "60px", lg: "115px" }}
             paddingY={{ base: 8, md: 4 }}
-            gap={{ base: 8, md: "120px" }}
+            gap={{ base: 8, md: "80px" }}
             mb={6}
         >
             <Flex

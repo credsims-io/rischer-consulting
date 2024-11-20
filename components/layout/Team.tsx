@@ -1,5 +1,3 @@
-"use client"
-
 import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import TeamMembers from '@/public/assets/team.json'
@@ -46,7 +44,7 @@ export default function Team() {
                     </Flex>
                     <Flex direction="column" gap={1}>
                         <Text
-                            fontSize={{ base: "14px", md: "16px" }}
+                            fontSize={{ base: "18px", md: "30px" }}
                             fontWeight="700"
                             color="#121212"
                         >
@@ -58,6 +56,7 @@ export default function Team() {
                             color="#667085"
                             lineHeight={{ base: "20px", md: "28px" }}
                             whiteSpace="pre-line"
+                            textAlign="justify"
                         >
                             {formatBio(member.bio)}
                         </Text>

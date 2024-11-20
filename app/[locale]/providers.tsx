@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const theme = extendTheme({
     fonts: {
-        heading: 'var(--font-lato)',
-        body: 'var(--font-lato)',
+        heading: 'var(--font-poppins)',
+        body: 'var(--font-poppins)',
     },
 })
 

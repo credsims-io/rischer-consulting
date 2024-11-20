@@ -62,6 +62,12 @@ export const ChamferedPinkBackground = () => (
     </svg>
 );
 
+export const ChamferedGrayBackground = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1392 746" preserveAspectRatio="none" fill="none">
+        <path d="M0 120.675V722C0 735.255 10.7451 746 24 746H1368C1381.25 746 1392 735.255 1392 722V24C1392 10.7452 1381.25 0 1368 0H1155.21C1147.82 0 1140.84 3.404 1136.29 9.22786L1075.21 87.4471C1070.66 93.271 1063.68 96.675 1056.29 96.675H24C10.7452 96.675 0 107.42 0 120.675Z" fill="#F8F9F0" />
+    </svg>
+);
+
 export const ArrowLeftIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
