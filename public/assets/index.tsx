@@ -126,3 +126,16 @@ export const CheckIcon = () => (
         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9457 9.12169L11.5923 17.1834L9.37568 14.815C8.96734 14.43 8.32568 14.4067 7.85901 14.7334C7.40401 15.0717 7.27568 15.6667 7.55568 16.145L10.1807 20.415C10.4373 20.8117 10.8807 21.0567 11.3823 21.0567C11.8607 21.0567 12.3157 20.8117 12.5723 20.415C12.9923 19.8667 21.0073 10.3117 21.0073 10.3117C22.0573 9.23836 20.7857 8.29336 19.9457 9.11002V9.12169Z" fill="#879037" />
     </svg>
 );
+
+export const Divider = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 1184 2" fill="none">
+        <path d="M0 1.00049L1184 1.00059" stroke="url(#paint0_linear_127_274)" />
+        <defs>
+            <linearGradient id="paint0_linear_127_274" x1="-4.37114e-08" y1="1.50049" x2="1184" y2="1.50059" gradientUnits="userSpaceOnUse">
+                <stop stop-opacity="0" />
+                <stop offset="0.497898" stop-color="#667085" />
+                <stop offset="1" stop-color="#666666" stop-opacity="0" />
+            </linearGradient>
+        </defs>
+    </svg>
+)
