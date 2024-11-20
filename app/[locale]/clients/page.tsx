@@ -12,6 +12,7 @@ export default function page() {
         >
             <Flex
                 direction="column"
+                gap={6}
             >
                 <Text
                     as="h2"

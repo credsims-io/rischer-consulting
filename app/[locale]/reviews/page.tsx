@@ -37,7 +37,7 @@ export default function page() {
                         width="100%"
                         direction="column"
                         bg={{ base: "#FEF4EC", lg: "transparent" }}
-                        rounded={{ base: "8px", md: "0px" }}
+                        rounded={{ base: "8px", xl: "0px" }}
                     >
                         <Flex position="absolute" display={{ base: "none", lg: "flex" }} top="0" width="100%" left="0" height="100%">
                             {index % 2 === 0 ? <ChamferedPinkBackground /> : <ChamferedGrayBackground />}
@@ -47,7 +47,7 @@ export default function page() {
                             position="relative"
                             direction="column"
                             py={{ base: 6, md: 10 }}
-                            px={{ base: 2, md: "80px", lg: "115px" }}
+                            px={{ base: 6, md: "80px", lg: "115px" }}
                         >
                             <Flex
                                 direction={{ base: "column", xl: "row" }}
