@@ -28,50 +28,16 @@ export default function ClientsGrid() {
                         p={8}
                         position="relative"
                         bg="white"
-                        _after={{
-                            content: '""',
-                            position: 'absolute',
-                            right: 0,
-                            top: 0,
-                            width: '1px',
-                            height: '100%',
-                            backgroundColor: '#D9D9D9',
-                            display: ((index + 1) % 4 === 0) ? 'none' : 'block',
-                            '@media (max-width: 991px)': {
-                                display: ((index + 1) % 3 === 0) ? 'none' : 'block',
-                            },
-                            '@media (max-width: 767px)': {
-                                display: ((index + 1) % 2 === 0) ? 'none' : 'block',
-                            },
+                        borderRight={{
+                            base: (index + 1) % 2 !== 0 ? '1px solid #D9D9D9' : 'none',
+                            md: (index + 1) % 3 !== 0 ? '1px solid #D9D9D9' : 'none',
+                            lg: (index + 1) % 4 !== 0 ? '1px solid #D9D9D9' : 'none',
                         }}
-                        _before={{
-                            content: '""',
-                            position: 'absolute',
-                            left: 0,
-                            bottom: 0,
-                            width: '100%',
-                            height: '1px',
-                            backgroundColor: '#D9D9D9',
-                            display: index >= logos.length - 4 ? 'none' : 'block',
-                            '@media (max-width: 991px)': {
-                                display: index >= logos.length - 3 ? 'none' : 'block',
-                            },
-                            '@media (max-width: 767px)': {
-                                display: index >= logos.length - 2 ? 'none' : 'block',
-                            },
+                        borderBottom={{
+                            base: index < logos.length - 2 ? '1px solid #D9D9D9' : 'none',
+                            md: index < logos.length - 3 ? '1px solid #D9D9D9' : 'none',
+                            lg: index < logos.length - 4 ? '1px solid #D9D9D9' : 'none',
                         }}
-                        borderLeft={{
-                            base: (index % 2 === 0) ? 'none' : '1px solid',
-                            md: (index % 3 === 0) ? 'none' : '1px solid',
-                            lg: (index % 4 === 0) ? 'none' : '1px solid',
-                        }}
-                        borderLeftColor="#D9D9D9"
-                        borderTop={{
-                            base: index < 2 ? 'none' : '1px solid',
-                            md: index < 3 ? 'none' : '1px solid',
-                            lg: index < 4 ? 'none' : '1px solid',
-                        }}
-                        borderTopColor="#D9D9D9"
                     >
                         <Image
                             src={`/images/${logo.image}`}
