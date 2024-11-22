@@ -20,25 +20,25 @@ const ServicesSection = () => {
             title: "Grants: Research, Writing, Training & Management",
             description: "Rischer Consulting specializes in Proposal Writing, Grant Writing, and Grant & Compliance Management, ensuring your organization navigates these critical areas with expertise and precision.",
             image: "/images/grants.png",
-            link: "/grants"
+            link: "/services/grants"
         },
         {
             title: "Team Training and Development",
             description: "Rischer Consulting specializes in cultivating and refining your workforce to drive sustainable business growth.",
             image: "/images/training.png",
-            link: "/team-training"
+            link: "/services/team-training"
         },
         {
             title: "Coaching & Leadership Development",
             description: "Rischer Consulting provides highly effective coaching and leadership development services.",
             image: "/images/coaching.png",
-            link: "/coaching-leadership"
+            link: "/services/coaching-leadership"
         },
         {
             title: "Strategic Planning & Instructional Design",
             description: "Rischer Consulting helps clients chart the course for success through our Strategic Planning Services. These services help clients navigate uncertainty and achieve their long-term goals with a clear roadmap.",
             image: "/images/planning.png",
-            link: "/strategic-planning"
+            link: "/services/strategic-planning"
         }
     ];
 

@@ -15,9 +15,22 @@ const NAV_ITEMS = [
         name: 'Services',
         path: '/services',
         subItems: [
-            { name: 'Consulting', path: '/services/consulting' },
-            { name: 'Training', path: '/services/training' },
-            { name: 'Strategy', path: '/services/strategy' },
+            {
+                name: "Grants: Research, Writing, Training & Management",
+                path: "/services/grants"
+            },
+            {
+                name: "Team Training and Development",
+                path: "/services/team-training"
+            },
+            {
+                name: "Coaching & Leadership Development",
+                path: "/services/coaching-leadership"
+            },
+            {
+                name: "Strategic Planning & Instructional Design",
+                path: "/services/strategic-planning"
+            }
         ]
     },
     { name: 'Courses', path: '/courses' },
@@ -106,6 +119,7 @@ export default function Navbar() {
                                             </Box>
                                         </MenuButton>
                                         <MenuList
+                                            padding={4}
                                             onMouseEnter={() => setIsOpen(true)}
                                             onMouseLeave={() => setIsOpen(false)}
                                         >
@@ -114,6 +128,8 @@ export default function Navbar() {
                                                     key={subItem.path}
                                                     as={NextLink}
                                                     href={subItem.path}
+                                                    py={6}
+                                                    borderRadius={"8px"}
                                                     color={isActive(subItem.path) ? "#F49953" : "#667085"}
                                                     _hover={{ color: "#F49953", bg: "gray.50" }}
                                                 >
