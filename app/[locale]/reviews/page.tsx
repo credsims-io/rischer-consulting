@@ -81,17 +81,17 @@ export default function page() {
                                     flexGrow={1}
                                     justify="space-between"
                                 >
-                                    <Text
+                                    <Flex
                                         fontSize={{ base: "16px", md: "18px" }}
                                         textAlign="justify"
                                         color="#101828"
+                                        direction="column"
                                     >
-                                        <span className="text-[#F49953] text-[40px] font-bold">"</span>
-                                        <br />
+                                        <Text className="text-[#F49953] text-[40px] font-bold">"</Text>
                                         {review.text}
                                         <br />
-                                        <span className="text-[#F49953] text-[40px] font-bold text-end">"</span>
-                                    </Text>
+                                        <Text className="text-[#F49953] text-[40px] font-bold text-end">"</Text>
+                                    </Flex>
                                     <Box textAlign="start">
                                         <Text
                                             fontSize={{ base: "14px", md: "16px" }}
