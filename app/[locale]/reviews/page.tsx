@@ -20,7 +20,7 @@ export default function page() {
                 fontWeight="500"
                 className='font-playfair'
             >
-                Our Team
+                Clients Reviews
             </Text>
 
             <Flex

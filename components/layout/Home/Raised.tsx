@@ -21,10 +21,10 @@ export default function Raised() {
             const updateCount = () => {
                 const now = Date.now();
                 const progress = Math.min((now - startTime) / duration, 1);
-                
+
                 // Easing function for smoother animation
                 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                
+
                 const currentCount = easeOutQuart * target;
                 setCount(currentCount);
 

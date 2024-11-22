@@ -105,7 +105,7 @@ export default function Navbar() {
                                             _hover={{ color: "#F49953" }}
                                             display="flex"
                                             alignItems="center"
-                                            gap={1}
+                                            gap={2}
                                         >
                                             {item.name}
                                             <Box
