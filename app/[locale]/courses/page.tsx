@@ -23,6 +23,7 @@ export default function page() {
                         fontSize={{ base: "32px", lg: "64px" }}
                         color="#121212"
                         fontWeight="500"
+                        className='font-playfair'
                     >
                         Online Courses
                     </Text>
@@ -38,6 +39,10 @@ export default function page() {
                 <Button
                     bg="#F49953"
                     color="#FFFFFF"
+                    as="a"
+                    href="https://rischerconsultingonlinecourses.thinkific.com/collections"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     View All Courses
                 </Button>
@@ -46,10 +51,11 @@ export default function page() {
                 direction="column"
             >
                 <Text
-                    as="h2"
+                    as="h3"
                     fontSize={{ base: "24", lg: "48px" }}
                     color="#121212"
                     fontWeight="500"
+                    className='font-playfair'
                 >
                     Virtual Learning
                 </Text>

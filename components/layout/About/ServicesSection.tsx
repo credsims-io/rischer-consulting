@@ -44,7 +44,7 @@ const ServicesSection = () => {
 
     return (
         <Box w="full" paddingX={{ base: "10px", md: "60px", lg: "115px" }} py={12}>
-            <Heading size={isMobile ? "xl" : "2xl"} mb={6}>Services</Heading>
+            <Heading className='font-playfair' size={isMobile ? "xl" : "2xl"} mb={6}>Services</Heading>
             <SimpleGrid columns={isMobile ? 1 : 2} spacing={8}>
                 {services.map((service, index) => (
                     <Flex key={index}

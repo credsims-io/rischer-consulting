@@ -8,7 +8,8 @@ import {
     Heading,
     List,
     ListItem,
-    useBreakpointValue
+    useBreakpointValue,
+    Text
 } from '@chakra-ui/react';
 
 const MissionVision = () => {
@@ -60,9 +61,14 @@ const MissionVision = () => {
                             p={6}
                             borderRadius="md"
                         >
-                            <Heading as="h2" fontSize="24px" mb={4} color="#121212">
+                            <Text fontSize="24px"
+                                mb={4}
+                                color="#121212"
+                                className='font-playfair'
+                                fontWeight="500"
+                            >
                                 {section.title}
-                            </Heading>
+                            </Text>
                             <List spacing={2}>
                                 {section.items.map((item, itemIdx) => (
                                     <ListItem key={itemIdx} color="#667085">
@@ -88,17 +94,17 @@ const MissionVision = () => {
             >
                 {sections.map((section, idx) => (
                     <Box key={idx}>
-                        <Heading
-                            as="h2"
+                        <Text
                             fontSize="32px"
                             mb={4}
                             borderTop="2px solid"
                             borderColor="#F49953"
                             pt={4}
                             color="#121212"
+                            className='font-playfair'
                         >
                             {section.title}
-                        </Heading>
+                        </Text>
                         <List spacing={2}>
                             {section.items.map((item, itemIdx) => (
                                 <ListItem key={itemIdx} color="#667085">

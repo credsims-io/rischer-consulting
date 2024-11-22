@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/layout/Navbar";
-import { Poppins } from 'next/font/google';
+import { Poppins, Playfair_Display } from 'next/font/google';
 import Footer from "@/components/layout/Footer";
 import PictureTopbar from "@/components/layout/Home/PictureTopbar";
 
@@ -10,6 +10,11 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '600', '700', '900'],
   variable: '--font-poppins',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
@@ -23,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body className={`${poppins.variable} font-poppins`}>
+    <html lang="en" className={`${poppins.className} ${playfair.className}`}>
+      <body className={`${poppins.variable} ${playfair.variable} font-poppins`}>
         <Providers>
           <Navbar />
           <PictureTopbar />

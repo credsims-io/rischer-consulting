@@ -15,7 +15,10 @@ export default function Welcome() {
                 <Text
                     color="#121212"
                     fontWeight="500"
-                    fontSize={{ base: "24px", md: "48px" }}>
+                    fontSize={{ base: "24px", md: "48px" }}
+                    className='font-playfair'
+                    maxWidth="640px"
+                >
                     Welcome to Rischer Consulting
                 </Text>
                 <Text
@@ -25,7 +28,7 @@ export default function Welcome() {
                     fontWeight="500"
                     fontSize={{ base: "16px", md: "24px" }}
                     lineHeight={{ base: "24px", md: "32px" }}
-                    textAlign="justify"
+                    textAlign="start"
                 >
                     At Rischer Consulting, we craft customized solutions tailored to each
                     organization's needs. Our dedication goes beyond mere consultation; we
@@ -48,6 +51,8 @@ export default function Welcome() {
                         color="#F49953"
                         rounded="4px"
                         fontWeight="700"
+                        as="a"
+                        href="/about"
                     >
                         Learn More
                     </Button>

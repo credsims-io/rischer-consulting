@@ -15,7 +15,7 @@ export default function Page() {
         >
             <Flex
                 direction="column"
-                gap={6}
+                gap={4}
                 paddingX={{ base: "10px", md: "60px", lg: "115px" }}
             >
                 <Text
@@ -23,6 +23,7 @@ export default function Page() {
                     fontSize={{ base: "32px", lg: "64px" }}
                     color="#121212"
                     fontWeight="500"
+                    className='font-playfair'
                 >
                     Capabilties Statement
                 </Text>

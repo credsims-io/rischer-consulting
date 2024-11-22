@@ -32,6 +32,7 @@ export default function Header() {
                     fontWeight="500"
                     letterSpacing={{ base: "1.2px", md: "2.16px" }}
                     mt={{ base: 12, md: 0 }}
+                    className='font-playfair'
                 >
                     Consulting with Integrity
                 </Text>
@@ -51,6 +52,9 @@ export default function Header() {
                         color="#FFFFFF"
                         rounded="4px"
                         fontWeight="700"
+                        as="a"
+                        href="/courses"
+                        size={{ base: "md", md: "lg" }}
                     >
                         Courses and E-books
                     </Button>
@@ -62,6 +66,9 @@ export default function Header() {
                         color="#FFFFFF"
                         rounded="4px"
                         fontWeight="700"
+                        as="a"
+                        href="/contact"
+                        size={{ base: "md", md: "lg" }}
                     >
                         Contact Us
                     </Button>

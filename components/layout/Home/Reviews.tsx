@@ -71,6 +71,7 @@ export default function Reviews() {
                         fontSize={{ base: "24px", md: "48px" }}
                         fontWeight="500"
                         mb={8}
+                        className='font-playfair'
                     >
                         Client Reviews
                     </Text>
@@ -170,6 +171,8 @@ export default function Reviews() {
                     color="#F49953"
                     rounded="4px"
                     fontWeight="700"
+                    as="a"
+                    href="/reviews"
                 >
                     More Reviews
                 </Button>

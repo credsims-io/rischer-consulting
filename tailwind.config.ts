@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        lato: ['var(--font-poppins)'],
+        poppins: ['var(--font-poppins)'],
+        playfair: ['var(--font-playfair)'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

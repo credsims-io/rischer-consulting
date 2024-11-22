@@ -14,7 +14,7 @@ export default function ClientsGrid() {
     ];
 
     return (
-        <Box maxW="1200px" mx="auto" px={4}>
+        <Box mx={{ base: "auto", lg: 0 }} px={4}>
             <SimpleGrid
                 columns={{ base: 2, md: 3, lg: 4 }}
                 spacing={0}

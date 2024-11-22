@@ -92,7 +92,17 @@ const Courses = () => {
                         <Text fontSize={{ base: "16px", md: "20px" }} color="#879037">
                             DELIVERY MODE - Online
                         </Text>
-                        <Button mt={4} bg="#F49953" color="#ffffff" size={{ base: "md", md: "lg" }} alignSelf="start">
+                        <Button
+                            mt={4}
+                            bg="#F49953"
+                            color="#ffffff"
+                            size={{ base: "md", md: "lg" }}
+                            alignSelf="start"
+                            as="a"
+                            href={course.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             {course.buttonText}
                         </Button>
                     </VStack>

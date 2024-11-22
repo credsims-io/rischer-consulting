@@ -19,6 +19,7 @@ export default function page() {
                     fontSize={{ base: "32px", lg: "64px" }}
                     color="#121212"
                     fontWeight="500"
+                    className='font-playfair'
                 >
                     Commitment to Clients
                 </Text>
@@ -35,10 +36,11 @@ export default function page() {
                 direction="column"
             >
                 <Text
-                    as="h2"
+                    as="h3"
                     fontSize={{ base: "24", lg: "48px" }}
                     color="#121212"
                     fontWeight="500"
+                    className='font-playfair'
                 >
                     Our Clients
                 </Text>

@@ -98,6 +98,7 @@ export default function ContactPage() {
                     fontSize={{ base: "32px", lg: "64px" }}
                     color="#121212"
                     fontWeight="500"
+                    className='font-playfair'
                 >
                     Contact Us
                 </Text>
@@ -112,29 +113,80 @@ export default function ContactPage() {
             </Flex>
 
             <form onSubmit={handleSubmit} className="flex items-center justify-center">
-                <VStack spacing={6} align="stretch" maxW="800px" border="1px solid #E4E4E4" p={{ base: 6, md: 8, lg: 16 }} borderRadius="12px">
+
+                <VStack spacing={6} align="stretch" maxW="1200px" w="100%" border="1px solid #E4E4E4" p={{ base: 6, md: 8, lg: 16 }} borderRadius="12px">
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Name</FormLabel>
-                        <Input fontSize="12px" name="name" placeholder="Enter your fullname" value={name} onChange={(e) => setName(e.target.value)} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Name
+                        </FormLabel>
+                        <Input
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="name"
+                            placeholder="Enter your fullname"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Email</FormLabel>
-                        <Input fontSize="12px" name="email" type="email" placeholder="Enter your email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Email
+                        </FormLabel>
+                        <Input
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email Address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Website</FormLabel>
-                        <Input fontSize="12px" name="website" placeholder="Enter Website link" value={website} onChange={(e) => setWebsite(e.target.value)} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Website
+                        </FormLabel>
+                        <Input
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="website"
+                            placeholder="Enter Website link"
+                            value={website}
+                            onChange={(e) => setWebsite(e.target.value)}
+                        />
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Social Media Handle</FormLabel>
-                        <Input fontSize="12px" name="socialMedia" placeholder="Enter Social media handle" value={socialMedia} onChange={(e) => setSocialMedia(e.target.value)} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Social Media Handle
+                        </FormLabel>
+                        <Input
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="socialMedia"
+                            placeholder="Enter Social media handle"
+                            value={socialMedia}
+                            onChange={(e) => setSocialMedia(e.target.value)}
+                        />
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Are you a business or non-profit organization?</FormLabel>
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Are you a business or non-profit organization?
+                        </FormLabel>
                         <RadioGroup value={isBusinessOrg} onChange={setIsBusinessOrg} display="flex" flexDirection="column" gap={4}>
                             <Radio value="business">Business</Radio>
                             <Radio value="non-profit">Non-Profit</Radio>
@@ -142,12 +194,29 @@ export default function ContactPage() {
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">Tell us about your business or organization</FormLabel>
-                        <Textarea fontSize="12px" name="businessOrg" placeholder="Enter details about your business or organization" value={businessOrg} onChange={(e) => setBusinessOrg(e.target.value)} rows={3} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            Tell us about your business or organization
+                        </FormLabel>
+                        <Textarea
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="businessOrg"
+                            placeholder="Enter details about your business or organization"
+                            value={businessOrg}
+                            onChange={(e) => setBusinessOrg(e.target.value)}
+                            rows={3}
+                        />
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">What is your Operating Budget?</FormLabel>
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            What is your Operating Budget?
+                        </FormLabel>
                         <RadioGroup value={operatingBudget} onChange={setOperatingBudget} display="flex" flexDirection="column" gap={4}>
                             <Radio value="0-500000">$0 - $500,000</Radio>
                             <Radio value="500000-1000000">$500,000 - $1,000,000</Radio>
@@ -156,7 +225,12 @@ export default function ContactPage() {
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">What is your budget for grant services?</FormLabel>
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            What is your budget for grant services?
+                        </FormLabel>
                         <RadioGroup value={grantServicesBudget} onChange={setGrantServicesBudget} display="flex" flexDirection="column" gap={4}>
                             <Radio value="0-3000">$0 - $3000</Radio>
                             <Radio value="3000-6000">$3000 - $6000</Radio>
@@ -165,13 +239,18 @@ export default function ContactPage() {
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">What service are you interested in?</FormLabel>
-                        <Select 
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            What service are you interested in?
+                        </FormLabel>
+                        <Select
+                            fontSize={{ base: "12px", lg: "16px" }}
                             name="interestedService"
                             value={interestedService}
                             onChange={(e) => setInterestedService(e.target.value)}
                             placeholder="Select a service"
-                            fontSize="12px"
                         >
                             {SERVICE_OPTIONS.map((service) => (
                                 <option key={service} value={service}>
@@ -182,8 +261,20 @@ export default function ContactPage() {
                     </FormControl>
 
                     <FormControl isRequired>
-                        <FormLabel color="#101828">How did you hear about Rischer Consulting?</FormLabel>
-                        <Textarea fontSize="12px" name="hearAboutUs" placeholder="Enter how you heard about Rischer Consulting" value={hearAboutUs} onChange={(e) => setHearAboutUs(e.target.value)} rows={3} />
+                        <FormLabel
+                            color="#101828"
+                            fontSize={{ base: "14px", lg: "18px" }}
+                        >
+                            How did you hear about Rischer Consulting?
+                        </FormLabel>
+                        <Textarea
+                            fontSize={{ base: "12px", lg: "16px" }}
+                            name="hearAboutUs"
+                            placeholder="Enter how you heard about Rischer Consulting"
+                            value={hearAboutUs}
+                            onChange={(e) => setHearAboutUs(e.target.value)}
+                            rows={3}
+                        />
                     </FormControl>
 
                     <Button

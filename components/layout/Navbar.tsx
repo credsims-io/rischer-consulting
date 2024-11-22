@@ -5,6 +5,7 @@ import { Box, Flex, IconButton, Link, Text, Menu, MenuButton, MenuList, MenuItem
 import { usePathname } from 'next/navigation';
 import NextLink from 'next/link';
 import { useState } from "react";
+import Image from "next/image";
 
 const NAV_ITEMS = [
     { name: 'Home', path: '/' },
@@ -54,10 +55,21 @@ export default function Navbar() {
                 boxShadow="sm"
                 zIndex={1000}
             >
-                <Text color="#F49953" fontSize="20px">RISCHER CONSULTING</Text>
+                <Box w={"200px"}>
+                    <Image
+                        src="/images/nav_logo.png"
+                        alt="Rischer Consulting"
+                        width={200}
+                        height={200}
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
+                </Box>
 
                 {/* Desktop Navitems */}
-                <Flex align="center" display={{ base: "none", lg: "flex" }} gap={{ base: 2, lg: 4 }}>
+                <Flex align="center" display={{ base: "none", lg: "flex" }} gap={{ base: 1, lg: 2, xl: 4 }} fontSize={{ base: "12px", lg: "14px", xl: "16px" }}>
                     {NAV_ITEMS.map((item) => {
                         if (item.subItems) {
                             return (
@@ -73,31 +85,25 @@ export default function Navbar() {
                                         onMouseLeave={() => setIsOpen(false)}
                                     >
                                         <MenuButton
-                                            as="div"
+                                            as={Text}
                                             cursor="pointer"
                                             fontWeight={isActive(item.path) ? "bold" : "normal"}
+                                            color={isActive(item.path) ? "#F49953" : "#667085"}
+                                            _hover={{ color: "#F49953" }}
                                             display="flex"
                                             alignItems="center"
                                             gap={1}
-                                            bg="transparent"
-                                            p={0}
                                         >
-                                            <Flex
-                                                align="center"
-                                                gap="2"
-                                                color={isActive(item.path) ? "#F49953" : "#667085"}
-                                                _hover={{ color: "#F49953" }}
+                                            {item.name}
+                                            <Box
+                                                as="span"
+                                                mt="-3px"
+                                                display="inline-block"
+                                                transform={mobileSubMenuOpen === item.name ? 'rotate(180deg)' : 'rotate(0deg)'}
+                                                transition="transform 0.2s"
                                             >
-                                                {item.name}
-                                                <Box
-                                                    as="span"
-                                                    display="inline-block"
-                                                    transform={mobileSubMenuOpen === item.name ? 'rotate(180deg)' : 'rotate(0deg)'}
-                                                    transition="transform 0.2s"
-                                                >
-                                                    <ChevronDownIcon />
-                                                </Box>
-                                            </Flex>
+                                                <ChevronDownIcon />
+                                            </Box>
                                         </MenuButton>
                                         <MenuList
                                             onMouseEnter={() => setIsOpen(true)}
@@ -158,7 +164,7 @@ export default function Navbar() {
                     >
                         <DrawerCloseButton color="#667085" />
                         <DrawerHeader borderBottomWidth="1px" px={4}>
-                            <Text color="#F49953" fontSize="20px">RISCHER CONSULTING</Text>
+                            <Image src="/images/nav_logo.png" alt="Rischer Consulting" width={200} height={200} />
                         </DrawerHeader>
 
                         <DrawerBody px={4} py={6}>
@@ -266,13 +272,13 @@ export default function Navbar() {
                 </Flex>
 
                 <Box display={{ base: "grid", md: "flex" }} gridTemplateColumns="1fr 1fr" columnGap={8} rowGap={4}>
-                    <Link href="https://www.instagram.com/rischerconsulting">
+                    <Link href="https://www.instagram.com/rischer_consulting/" target="_blank" rel="noopener noreferrer">
                         <InstagramIcon />
                     </Link>
-                    <Link href="https://www.Linkedin.com/rischerconsulting">
+                    <Link href="https://www.linkedin.com/company/rischer-consulting" target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon />
                     </Link>
-                    <Link href="https://www.facebook.com/rischerconsulting">
+                    <Link href="https://www.facebook.com/rischerconsulting" target="_blank" rel="noopener noreferrer">
                         <FacebookIcon />
                     </Link>
                 </Box>

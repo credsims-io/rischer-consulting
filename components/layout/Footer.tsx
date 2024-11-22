@@ -115,27 +115,24 @@ export default function Footer() {
                         <Image src="/images/badge2.png" alt="Rischer Consulting" width={96} height={96} />
                     </Flex>
                     <Flex align="center" justify="center" gap={4} mt={4}>
-                        <Link href="https://www.facebook.com/rischerconsulting">
-                            <YoutubeFooterIcon />
-                        </Link>
-                        <Link href="https://www.facebook.com/rischerconsulting">
+                        <Link href="https://www.instagram.com/rischer_consulting/" target="_blank" rel="noopener noreferrer">
                             <InstagramFooterIcon />
                         </Link>
-                        <Link href="https://www.facebook.com/rischerconsulting">
+                        <Link href="https://www.facebook.com/rischerconsulting" target="_blank" rel="noopener noreferrer">
                             <FacebookFooterIcon />
                         </Link>
-                        <Link href="https://www.linkedin.com/company/rischer-consulting/">
+                        <Link href="https://www.linkedin.com/company/rischer-consulting" target="_blank" rel="noopener noreferrer">
                             <LinkedInFooterIcon />
                         </Link>
                     </Flex>
                     <Flex align="center" justify="center" gap={4} mt={4} fontSize={{ base: "18px", md: "20px" }}>
-                        <Link color="#667085">
+                        <Link href="/contact" color="#667085">
                             Contact
                         </Link>
                         <Link color="#667085">
                             Privacy
                         </Link>
-                        <Link color="#667085">
+                        <Link color="#667085" href="/">
                             Website
                         </Link>
                     </Flex>
