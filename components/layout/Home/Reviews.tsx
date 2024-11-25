@@ -10,23 +10,25 @@ export default function Reviews() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [slideDirection, setSlideDirection] = useState('next');
 
-    const changeReview = (newIndex: number) => {
+    const changeReview = (newIndex: number, direction: 'next' | 'prev') => {
+        setSlideDirection(direction);
         setIsTransitioning(true);
         setTimeout(() => {
             setCurrentIndex(newIndex);
             setIsTransitioning(false);
-        }, 300); // Match this with CSS transition duration
+        }, 300);
     };
 
     const nextReview = () => {
         const newIndex = (currentIndex + 1) % reviews.length;
-        changeReview(newIndex);
+        changeReview(newIndex, 'next');
     };
 
     const prevReview = () => {
         const newIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-        changeReview(newIndex);
+        changeReview(newIndex, 'prev');
     };
 
     // Auto-play functionality
@@ -55,8 +57,16 @@ export default function Reviews() {
                 direction="column"
                 bg={{ base: "#FEF4EC", lg: "transparent" }}
                 rounded={{ base: "8px   ", xl: "0px" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
             >
-                <Flex position="absolute" display={{ base: "none", lg: "flex" }} top="0" width="100%" left="0" height="100%">
+                <Flex
+                    position="absolute"
+                    display={{ base: "none", lg: "flex" }}
+                    px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                    top="0" width="100%"
+                    left="0"
+                    height="100%"
+                >
                     <ChamferedPinkBackground />
                 </Flex>
                 <Flex
@@ -64,7 +74,7 @@ export default function Reviews() {
                     position="relative"
                     direction="column"
                     py={{ base: 6, md: 10 }}
-                    px={{ base: 6, md: "80px", lg: "115px" }}
+                    px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
                 >
                     <Text
                         color="#121212"
@@ -82,7 +92,29 @@ export default function Reviews() {
                         h="100%"
                         align={{ base: "start" }}
                         opacity={isTransitioning ? 0 : 1}
-                        transition="opacity 0.3s ease-in-out"
+                        transform={`translateX(${isTransitioning
+                            ? (slideDirection === 'next' ? '-20px' : '20px')
+                            : '0px'})`}
+                        transition="all 0.3s ease-in-out"
+                        sx={{
+                            '&': {
+                                opacity: isTransitioning ? 0 : 1,
+                                transform: `translateX(${isTransitioning
+                                    ? (slideDirection === 'next' ? '-20px' : '20px')
+                                    : '0px'})`,
+                            },
+                            '@keyframes slideIn': {
+                                from: {
+                                    opacity: 0,
+                                    transform: `translateX(${slideDirection === 'next' ? '20px' : '-20px'})`,
+                                },
+                                to: {
+                                    opacity: 1,
+                                    transform: 'translateX(0)',
+                                },
+                            },
+                            animation: isTransitioning ? 'none' : 'slideIn 0.3s ease-in-out',
+                        }}
                     >
                         <Box
                             position="relative"
@@ -139,7 +171,14 @@ export default function Reviews() {
                         </Flex>
                     </Flex>
                 </Flex>
-                <Flex gap={8} zIndex={6} position={{ md: "absolute" }} bottom="2%" right="100px" mb={{ base: 4, md: 0 }} px={{ base: 2, md: 0 }}>
+                <Flex
+                    gap={8}
+                    zIndex={6}
+                    position={{ md: "absolute" }}
+                    bottom="2%" right="100px"
+                    mb={{ base: 4, md: 0 }}
+                    px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                >
                     <IconButton
                         aria-label="Previous review"
                         icon={<ArrowLeftIcon />}

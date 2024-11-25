@@ -5,8 +5,8 @@ export default function Quote() {
     return (
         <Flex
             align={{ base: "start", md: "center" }}
-            paddingX={{ base: "10px", md: "60px", lg: "115px" }}
-            direction={{ base: "column", md: "row" }}
+            paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+            direction={{ base: "column", lg: "row" }}
             gap={{ base: 4, md: "120px" }}
             justify={{ base: "start", md: "center" }}
         >

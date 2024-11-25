@@ -62,18 +62,18 @@ export default function Navbar() {
             <Flex
                 align="center"
                 justify="space-between"
-                px={{ base: 4, lg: 32 }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
                 py={{ base: 4, md: 8 }}
                 bg="white"
                 boxShadow="sm"
                 zIndex={1000}
             >
-                <Box w={"200px"}>
+                <Box as="a" href="/" maxW={{ base: '200px', xl: '300px', "2xl": "400px" }}>
                     <Image
                         src="/images/nav_logo.png"
                         alt="Rischer Consulting"
-                        width={200}
-                        height={200}
+                        width={300}
+                        height={60}
                         style={{
                             width: '100%',
                             height: 'auto',
@@ -108,15 +108,6 @@ export default function Navbar() {
                                             gap={2}
                                         >
                                             {item.name}
-                                            <Box
-                                                as="span"
-                                                mt="-3px"
-                                                display="inline-block"
-                                                transform={mobileSubMenuOpen === item.name ? 'rotate(180deg)' : 'rotate(0deg)'}
-                                                transition="transform 0.2s"
-                                            >
-                                                <ChevronDownIcon />
-                                            </Box>
                                         </MenuButton>
                                         <MenuList
                                             padding={4}
@@ -201,14 +192,7 @@ export default function Navbar() {
                                                     _hover={{ color: "#F49953" }}
                                                 >
                                                     <Text>{item.name}</Text>
-                                                    <Box
-                                                        as="span"
-                                                        display="inline-block"
-                                                        transform={mobileSubMenuOpen === item.name ? 'rotate(180deg)' : 'rotate(0deg)'}
-                                                        transition="transform 0.2s"
-                                                    >
-                                                        <ChevronDownIcon />
-                                                    </Box>
+
                                                 </Flex>
                                                 {mobileSubMenuOpen === item.name && (
                                                     <VStack
@@ -264,7 +248,7 @@ export default function Navbar() {
                 bg="#F49953"
                 color="#FFFFFF"
                 direction={{ base: "row", md: "row" }}
-                px={{ base: 4, lg: 32 }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
                 py={4}
                 justify="space-between"
             >

@@ -1,7 +1,14 @@
+import { Metadata } from "next";
 import MissonVision from "@/components/layout/About/MissionVision";
 import Quote from "@/components/layout/About/Quote";
 import ServicesSection from "@/components/layout/About/ServicesSection";
 import { Flex, Text } from "@chakra-ui/react";
+
+export const metadata: Metadata = {
+    title: "About Us | Rischer Consulting",
+    description: "Learn about Rischer Consulting's mission, vision, and commitment to providing integrity-driven consulting services with stellar results.",
+    keywords: ["about us", "consulting mission", "consulting vision", "professional services"],
+};
 
 export default function page() {
     return (
@@ -15,7 +22,7 @@ export default function page() {
             <Flex
                 direction="column"
                 gap={6}
-                paddingX={{ base: "10px", md: "60px", lg: "115px" }}
+                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
             >
                 <Text
                     as="h2"

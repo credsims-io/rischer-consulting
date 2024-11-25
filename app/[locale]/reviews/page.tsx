@@ -7,7 +7,7 @@ export default function page() {
     return (
         <Flex
             direction="column"
-            paddingX={{ base: "10px", md: "60px", lg: "115px" }}
+            paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
             paddingY={{ base: 8, md: 4 }}
             gap={{ base: 8, md: "80px" }}
             mb={6}
@@ -48,7 +48,7 @@ export default function page() {
                             position="relative"
                             direction="column"
                             py={{ base: 6, md: 10 }}
-                            px={{ base: 6, md: "80px", lg: "115px" }}
+                            px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
                         >
                             <Flex
                                 direction={{ base: "column", xl: "row" }}

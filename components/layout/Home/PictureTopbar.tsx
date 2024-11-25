@@ -21,8 +21,8 @@ export default function PictureTopbar() {
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
                 align={{ base: "start", md: "center" }}
-                paddingX={{ base: "10px", md: "60px", lg: "115px" }}
-                height={{ base: "123px", md: "277px" }}
+                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                height={{ base: "123px", md: "277px", xl: "350px" }}
                 rounded={{ base: "16px", md: "24px" }}
                 position="relative"
             >

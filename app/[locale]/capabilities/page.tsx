@@ -16,7 +16,7 @@ export default function Page() {
             <Flex
                 direction="column"
                 gap={4}
-                paddingX={{ base: "10px", md: "60px", lg: "115px" }}
+                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
             >
                 <Text
                     as="h2"
