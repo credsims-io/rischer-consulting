@@ -23,10 +23,10 @@ const NAV_ITEMS = [
                 name: "Team Training and Development",
                 path: "/services/team-training"
             },
-            {
-                name: "Coaching & Leadership Development",
-                path: "/services/coaching-leadership"
-            },
+            // {
+            //     name: "Coaching & Leadership Development",
+            //     path: "/services/coaching-leadership"
+            // },
             {
                 name: "Strategic Planning & Instructional Design",
                 path: "/services/strategic-planning"
