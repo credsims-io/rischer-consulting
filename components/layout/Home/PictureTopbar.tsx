@@ -2,12 +2,19 @@
 
 import { Flex } from '@chakra-ui/react'
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function PictureTopbar() {
-
     const pathname = usePathname();
+    const [shouldShow, setShouldShow] = useState(false);
 
-    if (pathname === '/') return null;
+    useEffect(() => {
+        // Only show the topbar if we're not on the homepage
+        setShouldShow(pathname !== '/');
+    }, [pathname]);
+
+    // Don't render anything until we're sure about the pathname
+    if (!pathname || !shouldShow) return null;
 
     return (
         <Flex
@@ -34,8 +41,7 @@ export default function PictureTopbar() {
                     borderRadius="inherit"
                     left="0"
                     top="0"
-                >
-                </Flex>
+                />
             </Flex>
         </Flex>
     )

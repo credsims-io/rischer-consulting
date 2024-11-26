@@ -201,7 +201,7 @@ export default function Reviews() {
                     />
                 </Flex>
             </Flex>
-            <Flex justify="center" mt={-4} display={{ base: "none", md: "flex" }}>
+            {/* <Flex justify="center" mt={-4} display={{ base: "none", md: "flex" }}>
                 <Button
                     bg="transparent"
                     border="1px solid #F49953"
@@ -215,7 +215,7 @@ export default function Reviews() {
                 >
                     More Reviews
                 </Button>
-            </Flex>
+            </Flex> */}
         </>
     )
 }
