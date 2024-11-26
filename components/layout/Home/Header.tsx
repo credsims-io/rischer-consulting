@@ -14,7 +14,7 @@ export default function Header() {
             rounded={{ base: "16px", md: "24px" }}
             position="relative"
         >
-            <Flex
+            {/* <Flex
                 position="absolute"
                 width="100%"
                 height="100%"
@@ -23,7 +23,7 @@ export default function Header() {
                 left="0"
                 top="0"
             >
-            </Flex>
+            </Flex> */}
             <Flex direction="column" zIndex={2}>
                 <Text
                     maxWidth="640px"

@@ -1,3 +1,4 @@
+import Courses from '@/components/layout/Courses/Courses';
 import { CheckIcon } from '@/public/assets';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
@@ -123,6 +124,30 @@ export default function page() {
                     </Flex>
                 ))}
             </Flex>
+            <Flex
+                direction="column"
+            >
+                <Text
+                    as="h3"
+                    fontSize={{ base: "24", lg: "48px" }}
+                    color="#121212"
+                    fontWeight="500"
+                    className='font-playfair'
+                >
+                    Virtual Learning
+                </Text>
+                <Text
+                    maxW="800px"
+                    color="#667085"
+                    fontSize={{ lg: "24px" }}
+                    lineHeight={{ base: "24px", md: "32px" }}
+                >
+                    Online learning offers all the advantages of skill acquisition and equips you with the resources necessary for success. Whether seeking additional income while
+                    employed or exploring a new career path, our online courses offer convenience,
+                    affordability, and results-driven outcomes.
+                </Text>
+            </Flex>
+            <Courses />
         </Flex>
     )
 }

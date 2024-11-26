@@ -33,10 +33,10 @@ const NAV_ITEMS = [
             }
         ]
     },
-    { name: 'Courses', path: '/courses' },
+    // { name: 'Courses', path: '/courses' },
     { name: 'Clients', path: '/clients' },
-    { name: 'Team', path: '/team' },
-    { name: 'Reviews', path: '/reviews' },
+    // { name: 'Team', path: '/team' },
+    // { name: 'Reviews', path: '/reviews' },
     { name: 'Contact', path: '/contact' },
 ];
 
@@ -68,7 +68,7 @@ export default function Navbar() {
                 boxShadow="sm"
                 zIndex={1000}
             >
-                <Box as="a" href="/" maxW={{ base: '200px', xl: '300px', "2xl": "400px" }}>
+                <Box as="a" href="/" maxW={{ base: '200px', xl: '300px', "2xl": "350px" }}>
                     <Image
                         src="/images/nav_logo.png"
                         alt="Rischer Consulting"

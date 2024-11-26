@@ -13,6 +13,7 @@ export default function page() {
             <Flex
                 gap={4}
                 justify="space-between"
+                direction={{ base: "column", md: "row" }}
                 align={{ base: "start", md: "center" }}
             >
                 <Flex

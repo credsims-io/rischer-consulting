@@ -3,6 +3,7 @@ import MissonVision from "@/components/layout/About/MissionVision";
 import Quote from "@/components/layout/About/Quote";
 import ServicesSection from "@/components/layout/About/ServicesSection";
 import { Flex, Text } from "@chakra-ui/react";
+import Team from "@/components/layout/Team";
 
 export const metadata: Metadata = {
     title: "About Us | Rischer Consulting",
@@ -46,6 +47,23 @@ export default function page() {
             <MissonVision />
             <Quote />
             <ServicesSection />
-        </Flex>
+
+            <Flex
+                direction="column"
+                gap={6}
+                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+            >
+                <Text
+                    as="h2"
+                    fontSize={{ base: "32px", lg: "64px" }}
+                    color="#121212"
+                    fontWeight="500"
+                    className='font-playfair'
+                >
+                    Our Team
+                </Text>
+                <Team />
+            </Flex>
+        </Flex >
     )
 }

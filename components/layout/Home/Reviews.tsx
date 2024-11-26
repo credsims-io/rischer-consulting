@@ -57,7 +57,7 @@ export default function Reviews() {
                 direction="column"
                 bg={{ base: "#FEF4EC", lg: "transparent" }}
                 rounded={{ base: "8px   ", xl: "0px" }}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px" }}
             >
                 <Flex
                     position="absolute"
