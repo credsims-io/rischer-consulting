@@ -168,10 +168,14 @@ export default function Navbar() {
                     <DrawerContent
                         minW="230px"
                         maxW="400px"
+                        px={6}
+                        py={4}
                     >
                         <DrawerCloseButton color="#667085" />
                         <DrawerHeader borderBottomWidth="1px" px={4}>
-                            <Image src="/images/nav_logo.png" alt="Rischer Consulting" width={200} height={200} />
+                            <Flex justify="start" align="center" width="100%">
+                                <Image src="/images/nav_logo.png" alt="Rischer Consulting" width={200} height={200} />
+                            </Flex>
                         </DrawerHeader>
 
                         <DrawerBody px={4} py={6}>
