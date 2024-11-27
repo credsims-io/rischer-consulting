@@ -70,6 +70,8 @@ export default function page() {
         >
             <Flex
                 direction="column"
+                align={{ "2xl": "center" }}
+                textAlign={{ "2xl": "center" }}
                 gap={6}
             >
                 <Text
@@ -126,6 +128,8 @@ export default function page() {
             </Flex>
             <Flex
                 direction="column"
+                align={{ "2xl": "center" }}
+                textAlign={{ "2xl": "center" }}
             >
                 <Text
                     as="h3"

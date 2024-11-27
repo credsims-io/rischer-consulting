@@ -48,8 +48,10 @@ export default function Page() {
                     </Button>
                 </Flex>
             </Flex>
-            <Flex align="center" justify="center">
-                <Image src="/images/capabilities_statement.png" alt="capabilities" width={1000} height={1000} />
+            <Flex align="center" justify="center" width="100%">
+                <Flex align="center" justify="center" minWidth={{ "2xl": "1330px" }}>
+                    <Image src="/images/capabilities_statement.png" alt="capabilities" style={{ minWidth: "100%", maxHeight: "100%" }} width={1000} height={1000} />
+                </Flex>
             </Flex>
         </Flex>
     )
