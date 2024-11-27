@@ -7,38 +7,50 @@ import NextLink from 'next/link';
 import { useState } from "react";
 import Image from "next/image";
 
-const NAV_ITEMS = [
+interface NavItem {
+    name: string;
+    path: string;
+    subItems?: {
+        name: string;
+        path: string;
+    }[];
+}
+
+const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Grants', path: '/services/grants' },
+    { name: 'Team Training', path: '/services/team-training' },
+    { name: 'Strategic Planning', path: '/services/strategic-planning' },
+    // {
+    //     name: 'Services',
+    //     path: '/services',
+    //     subItems: [
+    //         {
+    //             name: "Grants: Research, Writing, Training & Management",
+    //             path: "/services/grants"
+    //         },
+    //         {
+    //             name: "Team Training and Development",
+    //             path: "/services/team-training"
+    //         },
+    //         {
+    //             name: "Coaching & Leadership Development",
+    //             path: "/services/coaching-leadership"
+    //         },
+    //         {
+    //             name: "Strategic Planning & Instructional Design",
+    //             path: "/services/strategic-planning"
+    //         }
+    //     ]
+    // },
+    // { name: 'Clients', path: '/clients' },
     { name: 'Capabilities', path: '/capabilities' },
-    {
-        name: 'Services',
-        path: '/services',
-        subItems: [
-            {
-                name: "Grants: Research, Writing, Training & Management",
-                path: "/services/grants"
-            },
-            {
-                name: "Team Training and Development",
-                path: "/services/team-training"
-            },
-            // {
-            //     name: "Coaching & Leadership Development",
-            //     path: "/services/coaching-leadership"
-            // },
-            {
-                name: "Strategic Planning & Instructional Design",
-                path: "/services/strategic-planning"
-            }
-        ]
-    },
+    { name: 'Contact', path: '/contact' },
     // { name: 'Courses', path: '/courses' },
-    { name: 'Clients', path: '/clients' },
     // { name: 'Team', path: '/team' },
     // { name: 'Reviews', path: '/reviews' },
-    { name: 'Contact', path: '/contact' },
-];
+]
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -67,6 +79,7 @@ export default function Navbar() {
                 bg="white"
                 boxShadow="sm"
                 zIndex={1000}
+                gap={4}
             >
                 <Box as="a" href="/" maxW={{ base: '200px', xl: '300px', "2xl": "350px" }}>
                     <Image
@@ -82,9 +95,14 @@ export default function Navbar() {
                 </Box>
 
                 {/* Desktop Navitems */}
-                <Flex align="center" display={{ base: "none", lg: "flex" }} gap={{ base: 1, lg: 2, xl: 4 }} fontSize={{ base: "12px", lg: "14px", xl: "16px" }}>
-                    {NAV_ITEMS.map((item) => {
-                        if (item.subItems) {
+                <Flex
+                    align="center"
+                    display={{ base: "none", lg: "flex" }}
+                    gap={{ base: 1, lg: 2, xl: 4 }}
+                    fontSize={{ base: "12px", lg: "12px", xl: "14px" }}
+                >
+                    {navItems.map((item) => {
+                        if (item?.subItems) {
                             return (
                                 <Menu
                                     key={item.name}
@@ -114,7 +132,7 @@ export default function Navbar() {
                                             onMouseEnter={() => setIsOpen(true)}
                                             onMouseLeave={() => setIsOpen(false)}
                                         >
-                                            {item.subItems.map((subItem) => (
+                                            {item?.subItems.map((subItem) => (
                                                 <MenuItem
                                                     key={subItem.path}
                                                     as={NextLink}
@@ -180,8 +198,8 @@ export default function Navbar() {
 
                         <DrawerBody px={4} py={6}>
                             <VStack align="stretch" spacing={6}>
-                                {NAV_ITEMS.map((item) => {
-                                    if (item.subItems) {
+                                {navItems.map((item) => {
+                                    if (item?.subItems) {
                                         return (
                                             <Box key={item.name}>
                                                 <Flex
@@ -205,7 +223,7 @@ export default function Navbar() {
                                                         ml={4}
                                                         spacing={4}
                                                     >
-                                                        {item.subItems.map((subItem) => (
+                                                        {item?.subItems.map((subItem) => (
                                                             <NextLink
                                                                 key={subItem.path}
                                                                 href={subItem.path}
