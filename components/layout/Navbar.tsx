@@ -45,7 +45,7 @@ const navItems: NavItem[] = [
     //     ]
     // },
     // { name: 'Clients', path: '/clients' },
-    { name: 'Capabilities', path: '/capabilities' },
+    { name: 'Contracts & Capabilities', path: '/capabilities' },
     { name: 'Contact', path: '/contact' },
     // { name: 'Courses', path: '/courses' },
     // { name: 'Team', path: '/team' },
@@ -99,7 +99,7 @@ export default function Navbar() {
                     align="center"
                     display={{ base: "none", lg: "flex" }}
                     gap={{ base: 1, lg: 2, xl: 4 }}
-                    fontSize={{ base: "12px", lg: "12px", xl: "14px" }}
+                    fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px" }}
                 >
                     {navItems.map((item) => {
                         if (item?.subItems) {
