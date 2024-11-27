@@ -18,6 +18,7 @@ export default function Team() {
             {TeamMembers.map((member, index) => (
                 <Flex
                     direction="column"
+                    key={index}
                 >
                     <Flex
                         key={index}

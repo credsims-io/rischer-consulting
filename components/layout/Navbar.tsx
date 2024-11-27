@@ -98,7 +98,7 @@ export default function Navbar() {
                 <Flex
                     align="center"
                     display={{ base: "none", lg: "flex" }}
-                    gap={{ base: 1, lg: 2, xl: 4 }}
+                    gap={{ base: 1, lg: 2, xl: 2, "2xl": 3 }}
                     fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px" }}
                 >
                     {navItems.map((item) => {

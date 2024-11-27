@@ -108,7 +108,7 @@ export default function page() {
             </Flex>
             <Flex direction="column" gap={{ base: 8, md: 10 }} mx={{ lg: "200px" }}>
                 {sections.map(({ title, content, featureDescription, keyFeatures }, index) => (
-                    <Flex direction="column" gap={{ base: 4, md: 6 }}>
+                    <Flex direction="column" gap={{ base: 4, md: 6 }} key={index}>
                         <Text
                             as="h3"
                             fontSize={{ base: "24px", md: "48px" }}
@@ -128,7 +128,7 @@ export default function page() {
             </Flex>
             <Flex
                 direction="column"
-                align={{ "2xl": "center" }}
+                align={{ "xl": "center" }}
                 textAlign={{ "2xl": "center" }}
             >
                 <Text
