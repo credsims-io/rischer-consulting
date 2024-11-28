@@ -1,6 +1,7 @@
 "use client"
 
-import { Flex } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -9,11 +10,9 @@ export default function PictureTopbar() {
     const [shouldShow, setShouldShow] = useState(false);
 
     useEffect(() => {
-        // Only show the topbar if we're not on the homepage
         setShouldShow(pathname !== '/');
     }, [pathname]);
 
-    // Don't render anything until we're sure about the pathname
     if (!pathname || !shouldShow) return null;
 
     return (
@@ -21,19 +20,24 @@ export default function PictureTopbar() {
             paddingX={{ base: 2, md: 4 }}
             paddingY={4}
         >
-            <Flex
+            <Box
                 width="100%"
-                backgroundImage="url('/images/topimage.png')"
-                backgroundSize="cover"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                align={{ base: "start", md: "center" }}
-                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                position="relative"
                 height={{ base: "123px", md: "277px", xl: "350px" }}
                 rounded={{ base: "16px", md: "24px" }}
-                position="relative"
+                overflow="hidden"
             >
-                <Flex
+                <Image
+                    src="/images/topimage.png"
+                    alt="Top banner image"
+                    fill
+                    priority
+                    style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                    }}
+                />
+                <Box
                     position="absolute"
                     width="100%"
                     height="100%"
@@ -42,7 +46,7 @@ export default function PictureTopbar() {
                     left="0"
                     top="0"
                 />
-            </Flex>
+            </Box>
         </Flex>
     )
 }
