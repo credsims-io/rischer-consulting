@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import NextLink from 'next/link';
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import AnimatedNavLogo from "../UI/AnimatedNavLogo";
 
 interface NavItem {
     name: string;
@@ -107,9 +108,9 @@ export default function Navbar() {
                     fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px", }}
                 >
                     {navItems.map((item) => (
-                        <NextLink 
-                            key={item.name} 
-                            href={item.path} 
+                        <NextLink
+                            key={item.name}
+                            href={item.path}
                             passHref
                             legacyBehavior
                         >
@@ -150,9 +151,9 @@ export default function Navbar() {
                         py={4}
                     >
                         <DrawerCloseButton color="#667085" mt={4} />
-                        <DrawerHeader borderBottomWidth="1px" px={4}>
-                            <Flex justify="start" align="center" width="100%" height="24px">
-                                <Image src="/images/nav_logo.png" alt="Rischer Consulting" width={200} height={200} />
+                        <DrawerHeader borderBottomWidth="1px" px={4} paddingLeft={0}>
+                            <Flex justify="start" align="center" width="100%" height="24px" paddingLeft={0} ml={-4}>
+                                <AnimatedNavLogo src="/images/nav_logo.png" alt="Rischer Consulting" priority />
                             </Flex>
                         </DrawerHeader>
 

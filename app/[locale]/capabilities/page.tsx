@@ -1,8 +1,8 @@
 'use client';
 
 import { DownloadIcon } from "@/public/assets";
-import { Button, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Button, Flex, Text, Box } from "@chakra-ui/react";
+import AnimatedImage from "@/components/UI/AnimatedImage";
 
 export default function Page() {
     return (
@@ -49,9 +49,19 @@ export default function Page() {
                 </Flex>
             </Flex>
             <Flex align="center" justify="center" width="100%">
-                <Flex align="center" justify="center" minWidth={{ "2xl": "1330px" }}>
-                    <Image src="/images/capabilities_statement.png" alt="capabilities" style={{ minWidth: "100%", maxHeight: "100%" }} width={1000} height={1000} />
-                </Flex>
+                <Box
+                    position="relative"
+                    width="100%"
+                    height={{ base: "500px", md: "800px" }}
+                    minWidth={{ "2xl": "1330px" }}
+                    overflow="hidden"
+                >
+                    <AnimatedImage
+                        src="/images/capabilities_statement.png"
+                        alt="capabilities"
+                        priority
+                    />
+                </Box>
             </Flex>
         </Flex>
     )

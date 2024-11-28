@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import AnimatedLogo from '@/components/UI/AnimatedLogo'
 
 export default function Welcome() {
     return (
@@ -57,11 +57,10 @@ export default function Welcome() {
                 </Box>
             </Flex>
             <Flex maxWidth={{ base: "100%", md: "300px" }}>
-                <Image
+                <AnimatedLogo
                     src="/images/rischer_logo.png"
                     alt="Rischer Consulting Logo"
-                    width={500}
-                    height={500}
+                    priority
                     style={{ flexShrink: 0, flex: 1 }}
                 />
             </Flex>
