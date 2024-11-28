@@ -43,7 +43,7 @@ const ServicesSection = () => {
     ];
 
     return (
-        <Box w="full" paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }} py={12}>
+        <Box w="full" paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }} py={12}>
             <Heading className='font-playfair' size={isMobile ? "xl" : "2xl"} mb={6}>Services</Heading>
             <SimpleGrid columns={isMobile ? 1 : 2} spacing={8}>
                 {services.map((service, index) => (

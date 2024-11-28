@@ -104,7 +104,7 @@ export default function page() {
     return (
         <Flex
             direction="column"
-            paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+            paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
             paddingY={{ base: 8, md: 4 }}
             gap={{ base: 8, md: "80px" }}
             mb={6}
@@ -178,14 +178,14 @@ export default function page() {
 
                             </Box>
                         }
-                        {featureDescription && <Text fontSize="20px" color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight="500">{featureDescription}</Text>}
+                        {featureDescription && <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{featureDescription}</Text>}
                         {keyFeatures && keyFeatures.map(({ title, description, subMenu }, index) => (
                             <>
                                 <Flex key={index} direction="column" gap={{ base: 2, md: 4 }}>
                                     <Flex align="start" gap={{ base: 2, md: 3 }}>
                                         <CheckIcon />
                                         <Flex align="center" gap={{ base: 2, md: 3 }}>
-                                            <Text fontSize="20px" color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight="500">{title} :  {description}</Text>
+                                            <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{title} :  {description}</Text>
                                         </Flex>
                                     </Flex>
                                 </Flex>
@@ -194,7 +194,7 @@ export default function page() {
                                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                                             <rect width="28" height="28" rx="14" fill="#F5F7E9" />
                                         </svg>
-                                        <Text fontSize="20px" color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight="500">{item}</Text>
+                                        <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{item}</Text>
                                     </Flex>
                                 ))}
                             </>

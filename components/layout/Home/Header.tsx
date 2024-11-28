@@ -21,7 +21,7 @@ export default function Header() {
                 position="relative"
                 height="100%"
                 align={{ base: "start", md: "center" }}
-                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
             >
                 <Flex direction="column" zIndex={2}>
                     <Text

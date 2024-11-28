@@ -88,7 +88,7 @@ export default function ContactPage() {
     return (
         <Flex
             direction="column"
-            paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+            paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
             paddingY={{ base: 8, md: 4 }}
             gap={{ base: 8, md: "80px" }}
             mb={6}

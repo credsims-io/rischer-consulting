@@ -17,7 +17,7 @@ export default function Page() {
                 direction="column"
                 alignItems={{ base: "start", xl: "center" }}
                 gap={4}
-                paddingX={{ base: "10px", md: "60px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
             >
                 <Text
                     as="h2"
