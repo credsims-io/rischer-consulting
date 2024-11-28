@@ -60,7 +60,7 @@ export default function Raised() {
                 zIndex={3}
                 top={{ base: "75px", md: "150px" }}
                 left={0}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
             >
                 <Flex
                     background="#FFFFFF"

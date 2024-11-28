@@ -74,7 +74,7 @@ export default function Navbar() {
             <Flex
                 align="center"
                 justify="space-between"
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                 py={{ base: 4, md: 8 }}
                 bg="white"
                 boxShadow="sm"
@@ -270,7 +270,7 @@ export default function Navbar() {
                 bg="#F49953"
                 color="#FFFFFF"
                 direction={{ base: "row", md: "row" }}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                 py={4}
                 justify="space-between"
             >

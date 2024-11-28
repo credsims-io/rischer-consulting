@@ -99,7 +99,7 @@ export default function page() {
                             position="relative"
                             direction="column"
                             py={{ base: 6, md: 10 }}
-                            px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                            px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                         >
                             <Flex
                                 direction={{ base: "column", xl: "row" }}

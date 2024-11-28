@@ -82,7 +82,7 @@ export default function Page() {
                             {content.map((paragraph, index) => (
                                 <Text
                                     key={index}
-                                    fontSize={{ base: "20px", md: "24px" }}
+                                    fontSize={{ base: "16px", md: "24px" }}
                                     color="#667085"
                                     lineHeight={{ base: "24px", md: "32px" }}
                                 >

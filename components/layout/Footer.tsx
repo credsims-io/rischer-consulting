@@ -47,7 +47,7 @@ export default function Footer() {
         <footer>
             <Flex
                 bg="#FEF4EC"
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                 py={16}
                 direction={{ base: "column-reverse", md: "row" }}
                 justify="space-between"
@@ -143,7 +143,7 @@ export default function Footer() {
                 bg="#F49953"
                 color="#FFFFFF"
                 direction={{ base: "row", md: "row" }}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "15%", "2xl": "20%" }}
+                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                 py={4}
                 justify="end"
             >

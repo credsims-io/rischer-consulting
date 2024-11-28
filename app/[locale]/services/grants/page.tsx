@@ -120,7 +120,7 @@ export default function page() {
                         </Text>
                         <Flex direction="column" gap={{ base: 4, md: 6 }}>
                             {content.map((paragraph, index) => (
-                                <Text key={index} fontSize={{ base: "20px", md: "24px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }}>{paragraph}</Text>
+                                <Text key={index} fontSize={{ base: "16px", md: "24px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }}>{paragraph}</Text>
                             ))}
                         </Flex>
                     </Flex>
