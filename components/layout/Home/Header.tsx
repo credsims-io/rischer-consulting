@@ -10,7 +10,7 @@ export default function Header() {
             height={{ base: "560px", md: "642px" }}
             rounded={{ base: "16px", md: "24px" }}
             overflow="hidden"
-            backgroundColor="gray.100"
+            backgroundColor="#00000000"
         >
             <AnimatedImage
                 src="/images/header_img.png"
