@@ -138,7 +138,7 @@ export default function page() {
                     width="100%"
                     maxHeight={{ base: "350px", lg: "520px" }}
                     height={{ base: "350px", lg: "520px" }}
-                    bg="blue"
+
                     backgroundImage={image ? `url(${image})` : undefined}
                     backgroundSize="cover"
                     backgroundPosition="center"
@@ -169,7 +169,7 @@ export default function page() {
                                 width="100%"
                                 maxHeight={{ base: "200px", lg: "460px" }}
                                 height={{ base: "200px", lg: "460px" }}
-                                bg="blue"
+
                                 backgroundImage={image ? `url(${sectionImage})` : undefined}
                                 backgroundSize="cover"
                                 backgroundPosition="center"

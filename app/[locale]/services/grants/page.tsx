@@ -97,7 +97,7 @@ export default function page() {
                     width="100%"
                     maxHeight={{ base: "350px", lg: "520px" }}
                     height={{ base: "350px", lg: "520px" }}
-                    bg="blue"
+
                     backgroundImage={image ? `url(${image})` : undefined}
                     backgroundSize="cover"
                     backgroundPosition="center"
