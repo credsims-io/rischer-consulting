@@ -18,7 +18,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About Us', path: '/about' },
     { name: 'Grants', path: '/services/grants' },
     { name: 'Team Training', path: '/services/team-training' },
     { name: 'Strategic Planning', path: '/services/strategic-planning' },
@@ -99,7 +99,7 @@ export default function Navbar() {
                     align="center"
                     display={{ base: "none", lg: "flex" }}
                     gap={{ base: 1, lg: 2, xl: 2, "2xl": 3 }}
-                    fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px" }}
+                    fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px", }}
                 >
                     {navItems.map((item) => {
                         if (item?.subItems) {
