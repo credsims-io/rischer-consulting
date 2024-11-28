@@ -1,9 +1,9 @@
 "use client"
 
 import { Box, Flex } from '@chakra-ui/react'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import AnimatedImage from '@/components/UI/AnimatedImage';
 
 export default function PictureTopbar() {
     const pathname = usePathname();
@@ -26,16 +26,12 @@ export default function PictureTopbar() {
                 height={{ base: "123px", md: "277px", xl: "350px" }}
                 rounded={{ base: "16px", md: "24px" }}
                 overflow="hidden"
+                backgroundColor="gray.100"
             >
-                <Image
+                <AnimatedImage
                     src="/images/topimage.png"
                     alt="Top banner image"
-                    fill
                     priority
-                    style={{
-                        objectFit: 'cover',
-                        objectPosition: 'center',
-                    }}
                 />
                 <Box
                     position="absolute"

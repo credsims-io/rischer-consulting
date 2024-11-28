@@ -4,7 +4,7 @@ import { ChevronDownIcon, FacebookIcon, HamburgerIcon, InstagramIcon, LinkedInIc
 import { Box, Flex, IconButton, Link, Text, Menu, MenuButton, MenuList, MenuItem, Button, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, VStack, useDisclosure } from "@chakra-ui/react";
 import { usePathname } from 'next/navigation';
 import NextLink from 'next/link';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface NavItem {
@@ -57,12 +57,17 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { isOpen: isMobileOpen, onOpen: onMobileOpen, onClose: onMobileClose } = useDisclosure();
     const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState<string | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const isActive = (path: string) => {
         if (path === '/') {
             return pathname === path;
         }
-        return pathname.startsWith(path);
+        return pathname?.startsWith(path);
     };
 
     return (
@@ -101,69 +106,24 @@ export default function Navbar() {
                     gap={{ base: 1, lg: 2, xl: 2, "2xl": 3 }}
                     fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px", }}
                 >
-                    {navItems.map((item) => {
-                        if (item?.subItems) {
-                            return (
-                                <Menu
-                                    key={item.name}
-                                    isOpen={isOpen}
-                                    onOpen={() => setIsOpen(true)}
-                                    onClose={() => setIsOpen(false)}
-                                    isLazy
-                                >
-                                    <Box
-                                        onMouseEnter={() => setIsOpen(true)}
-                                        onMouseLeave={() => setIsOpen(false)}
-                                    >
-                                        <MenuButton
-                                            as={Text}
-                                            cursor="pointer"
-                                            fontWeight={isActive(item.path) ? "bold" : "normal"}
-                                            color={isActive(item.path) ? "#F49953" : "#667085"}
-                                            _hover={{ color: "#F49953" }}
-                                            display="flex"
-                                            alignItems="center"
-                                            gap={2}
-                                        >
-                                            {item.name}
-                                        </MenuButton>
-                                        <MenuList
-                                            padding={4}
-                                            onMouseEnter={() => setIsOpen(true)}
-                                            onMouseLeave={() => setIsOpen(false)}
-                                        >
-                                            {item?.subItems.map((subItem) => (
-                                                <MenuItem
-                                                    key={subItem.path}
-                                                    as={NextLink}
-                                                    href={subItem.path}
-                                                    py={6}
-                                                    borderRadius={"8px"}
-                                                    color={isActive(subItem.path) ? "#F49953" : "#667085"}
-                                                    _hover={{ color: "#F49953", bg: "gray.50" }}
-                                                >
-                                                    {subItem.name}
-                                                </MenuItem>
-                                            ))}
-                                        </MenuList>
-                                    </Box>
-                                </Menu>
-                            );
-                        }
-
-                        return (
-                            <NextLink key={item.name} href={item.path} passHref>
-                                <Text
-                                    cursor="pointer"
-                                    color={isActive(item.path) ? "#F49953" : "#667085"}
-                                    _hover={{ color: "#F49953" }}
-                                    fontWeight={isActive(item.path) ? "bold" : "normal"}
-                                >
-                                    {item.name}
-                                </Text>
-                            </NextLink>
-                        );
-                    })}
+                    {navItems.map((item) => (
+                        <NextLink 
+                            key={item.name} 
+                            href={item.path} 
+                            passHref
+                            legacyBehavior
+                        >
+                            <Text
+                                as="a"
+                                cursor="pointer"
+                                color={isActive(item.path) ? "#F49953" : "#667085"}
+                                _hover={{ color: "#F49953" }}
+                                fontWeight={isActive(item.path) ? "bold" : "normal"}
+                            >
+                                {item.name}
+                            </Text>
+                        </NextLink>
+                    ))}
                 </Flex>
 
                 {/* Mobile Menu Button */}

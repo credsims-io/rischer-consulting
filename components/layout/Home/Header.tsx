@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
+import AnimatedImage from '@/components/UI/AnimatedImage';
 
 export default function Header() {
     return (
@@ -9,16 +10,12 @@ export default function Header() {
             height={{ base: "560px", md: "642px" }}
             rounded={{ base: "16px", md: "24px" }}
             overflow="hidden"
+            backgroundColor="gray.100"
         >
-            <Image
+            <AnimatedImage
                 src="/images/header_img.png"
                 alt="Header background"
-                fill
                 priority
-                style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                }}
             />
             <Flex
                 position="relative"
