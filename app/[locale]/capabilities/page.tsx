@@ -2,7 +2,7 @@
 
 import { DownloadIcon } from "@/public/assets";
 import { Button, Flex, Text, Box } from "@chakra-ui/react";
-import AnimatedImage from "@/components/UI/AnimatedImage";
+import CapabilitiesImage from '@/components/UI/CapabilitiesImage';
 
 export default function Page() {
     return (
@@ -48,15 +48,14 @@ export default function Page() {
                     </Button>
                 </Flex>
             </Flex>
-            <Flex align="center" justify="center" width="100%">
-                <Box
-                    position="relative"
-                    width="100%"
-                    height={{ base: "500px", md: "800px" }}
-                    minWidth={{ "2xl": "1330px" }}
-                    overflow="hidden"
-                >
-                    <AnimatedImage
+            <Flex
+                align="center"
+                justify="center"
+                width="100%"
+                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+            >
+                <Box width="100%">
+                    <CapabilitiesImage
                         src="/images/capabilities_statement.png"
                         alt="capabilities"
                         priority

@@ -120,7 +120,7 @@ export default function page() {
                     fontSize={{ base: "32px", lg: "64px" }}
                     color="#121212"
                     fontWeight="500"
-                    className="font-playfair"
+                    className="font-pplayfair"
                 >
                     {pageTitle}
                 </Text>
