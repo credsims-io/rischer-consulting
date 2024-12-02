@@ -1,7 +1,7 @@
 "use client"
 
 import { FacebookFooterIcon, InstagramFooterIcon, LinkedInFooterIcon, YoutubeFooterIcon } from "@/public/assets";
-import { Box, Button, Checkbox, CheckboxGroup, Flex, Input, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Checkbox, CheckboxGroup, Flex, Input, Link, Text, useToast } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState, FormEvent } from "react";
 
@@ -9,6 +9,7 @@ export default function Footer() {
     const [email, setEmail] = useState("");
     const [agreedToEmails, setAgreedToEmails] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const toast = useToast();
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -32,12 +33,30 @@ export default function Footer() {
                 // Reset form
                 setEmail("");
                 setAgreedToEmails(false);
-                // You might want to add a success toast/message here
+                toast({
+                    title: "Subscription successful",
+                    description: "Thank you for subscribing to our newsletter!",
+                    status: "success",
+                    duration: 5000,
+                    isClosable: true,
+                });
             } else {
-                // Handle error - maybe add an error toast/message
+                toast({
+                    title: "Subscription failed",
+                    description: "There was an error subscribing to the newsletter. Please try again.",
+                    status: "error",
+                    duration: 5000,
+                    isClosable: true,
+                });
             }
         } catch (error) {
-            // Handle error - maybe add an error toast/message
+            toast({
+                title: "Error",
+                description: "There was an error subscribing to the newsletter. Please try again.",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+            });
         } finally {
             setIsSubmitting(false);
         }
