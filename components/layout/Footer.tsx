@@ -148,9 +148,6 @@ export default function Footer() {
                         <Link href="/contact" color="#667085">
                             Contact
                         </Link>
-                        <Link color="#667085">
-                            Privacy
-                        </Link>
                         <Link color="#667085" href="/">
                             Website
                         </Link>
