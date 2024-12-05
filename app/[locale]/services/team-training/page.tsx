@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function page() {
 
     const trainingInformation = {
-        "pageTitle": "Team Training and Development",
+        "pageTitle": "Coaching & Training",
         "image": "/images/training.png",
         "pageSubtitle": "Rischer Consulting specializes in cultivating and refining your workforce to drive sustainable business growth.",
         "sections": [

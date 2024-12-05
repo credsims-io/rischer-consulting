@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Grants', path: '/services/grants' },
-    { name: 'Team Training', path: '/services/team-training' },
+    { name: 'Coaching & Training', path: '/services/team-training' },
     { name: 'Strategic Planning', path: '/services/strategic-planning' },
     // {
     //     name: 'Services',

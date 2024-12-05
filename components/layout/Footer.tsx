@@ -164,8 +164,16 @@ export default function Footer() {
                 direction={{ base: "row", md: "row" }}
                 px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
                 py={4}
-                justify="end"
+                justify="space-between"
             >
+                <Text
+                    color="#FFFFFF"
+                    fontWeight="500"
+                    lineHeight={{ base: "20px", md: "24px" }}
+                    fontSize={{ base: "14px", md: "16px" }}
+                >
+                    &copy; 2024-2025 Rischer Consulting
+                </Text>
                 <Text
                     color="#FFFFFF"
                     fontWeight="500"
