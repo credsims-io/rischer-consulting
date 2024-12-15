@@ -347,7 +347,7 @@
                 <a href="https://www.dart.org/" target="_blank" class="w-inline-block"><img src="images/1200px-Dallas_Area_Rapid_Transit_logo.svg.webp" loading="lazy" sizes="(max-width: 479px) 26vw, (max-width: 767px) 95px, (max-width: 991px) 110px, 7vw" srcset="images/1200px-Dallas_Area_Rapid_Transit_logo.svg-p-500.png 500w, images/1200px-Dallas_Area_Rapid_Transit_logo.svg-p-800.png 800w, images/1200px-Dallas_Area_Rapid_Transit_logo.svg.webp 1200w" alt="" class="image-19"></a>
               </div>
               <div class="div-block-156">
-                <a href="http://dc3online.org/" target="_blank" class="w-inline-block"><img src="images/cropped-DC3-Logo-1-1.webp" loading="lazy" alt="" class="image-19 dc3"></a>
+                <a href="https://dc3online.org/" target="_blank" class="w-inline-block"><img src="images/cropped-DC3-Logo-1-1.webp" loading="lazy" alt="" class="image-19 dc3"></a>
               </div>
               <div>
                 <a href="https://www.mercystreetdallas.org/" target="_blank" class="w-inline-block"><img src="images/Mercy-Street-Logo.webp" loading="lazy" sizes="(max-width: 479px) 34vw, (max-width: 767px) 125px, (max-width: 991px) 140px, 9vw" srcset="images/Mercy-Street-Logo-p-500.png 500w, images/Mercy-Street-Logo.webp 2232w" alt="" class="image-19 mercyh"></a>
