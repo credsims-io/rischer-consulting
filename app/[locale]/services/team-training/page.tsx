@@ -104,7 +104,7 @@ export default function page() {
     return (
         <Flex
             direction="column"
-            paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+            px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
             paddingY={{ base: 8, md: 4 }}
             gap={{ base: 8, md: "80px" }}
             mb={6}
@@ -120,7 +120,7 @@ export default function page() {
                     fontSize={{ base: "32px", lg: "64px" }}
                     color="#121212"
                     fontWeight="500"
-                    className="font-pplayfair"
+                    className="font-playfair"
                 >
                     {pageTitle}
                 </Text>

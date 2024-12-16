@@ -66,7 +66,7 @@ export default function Footer() {
         <footer>
             <Flex
                 bg="#FEF4EC"
-                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 py={16}
                 direction={{ base: "column-reverse", md: "row" }}
                 justify="space-between"
@@ -159,7 +159,7 @@ export default function Footer() {
                 bg="#F49953"
                 color="#FFFFFF"
                 direction={{ base: "row", md: "row" }}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 py={4}
                 justify="space-between"
             >
@@ -171,14 +171,17 @@ export default function Footer() {
                 >
                     &copy; 2024-2025 Rischer Consulting
                 </Text>
-                <Text
+                <Link
+                    href="https://crediblesimulations.com"
                     color="#FFFFFF"
                     fontWeight="500"
                     lineHeight={{ base: "20px", md: "24px" }}
                     fontSize={{ base: "14px", md: "16px" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Website powered by Credsims
-                </Text>
+                    Website powered by Credible Simulations
+                </Link>
 
             </Flex>
         </footer>

@@ -62,7 +62,7 @@ export default function Reviews() {
                 <Flex
                     position="absolute"
                     display={{ base: "none", lg: "flex" }}
-                    px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                    px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                     top="0" width="100%"
                     left="0"
                     height="100%"
@@ -74,7 +74,7 @@ export default function Reviews() {
                     position="relative"
                     direction="column"
                     py={{ base: 6, md: 10 }}
-                    px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                    px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 >
                     <Text
                         color="#121212"
@@ -177,7 +177,7 @@ export default function Reviews() {
                     position={{ md: "absolute" }}
                     bottom="2%" right="100px"
                     mb={{ base: 4, md: 0 }}
-                    px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                    px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 >
                     <IconButton
                         aria-label="Previous review"

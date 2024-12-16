@@ -24,7 +24,7 @@ export default function page() {
                 direction="column"
                 align={{ "2xl": "center" }}
                 gap={6}
-                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
             >
                 <Text
                     as="h2"
@@ -52,7 +52,7 @@ export default function page() {
             <Flex
                 direction="column"
                 gap={6}
-                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
             >
                 <Text
                     as="h2"

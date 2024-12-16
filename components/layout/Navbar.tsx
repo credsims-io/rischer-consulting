@@ -80,7 +80,7 @@ export default function Navbar() {
             <Flex
                 align="center"
                 justify="space-between"
-                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 py={{ base: 4, md: 8 }}
                 bg="white"
                 boxShadow="sm"
@@ -104,8 +104,8 @@ export default function Navbar() {
                 <Flex
                     align="center"
                     display={{ base: "none", lg: "flex" }}
-                    gap={{ base: 1, lg: 2, xl: 2, "2xl": 3 }}
-                    fontSize={{ base: "12px", lg: "10px", xl: "12px", "2xl": "13px", }}
+                    gap={{ base: 1, lg: 2, xl: 4 }}
+                    fontSize={{ lg: "12px", xl: "14px", "2xl": "16px" }}
                 >
                     {navItems.map((item) => (
                         <NextLink
@@ -231,7 +231,7 @@ export default function Navbar() {
                 bg="#F49953"
                 color="#FFFFFF"
                 direction={{ base: "row", md: "row" }}
-                px={{ base: 6, md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 py={4}
                 justify="space-between"
             >

@@ -84,7 +84,7 @@ const MissionVision = () => {
 
         return (
             <SimpleGrid
-                paddingX={{ base: "10px", md: "80px", lg: "115px", xl: "10%", "2xl": "15%" }}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
                 py={8}
                 columns={3}
                 spacing={8}
