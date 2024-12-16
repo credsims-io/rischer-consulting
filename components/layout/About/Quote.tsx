@@ -1,3 +1,5 @@
+"use client";
+
 import { QuoteIcon } from "@/public/assets";
 import { Flex, Text } from "@chakra-ui/react";
 
