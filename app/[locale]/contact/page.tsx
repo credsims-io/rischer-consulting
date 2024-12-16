@@ -93,7 +93,7 @@ export default function ContactPage() {
             gap={{ base: 8, md: "80px" }}
             mb={6}
         >
-            <Flex direction="column" gap={6}>
+            <Flex direction="column" gap={6} align={{ "2xl": "center" }}>
                 <Text
                     as="h2"
                     fontSize={{ base: "32px", lg: "64px" }}
