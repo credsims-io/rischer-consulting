@@ -167,16 +167,16 @@ export default function Footer() {
                     color="#FFFFFF"
                     fontWeight="500"
                     lineHeight={{ base: "20px", md: "24px" }}
-                    fontSize={{ base: "14px", md: "16px" }}
+                    fontSize={{ base: "10px", md: "16px" }}
                 >
                     &copy; 2024-2025 Rischer Consulting
                 </Text>
                 <Link
-                    href="https://crediblesimulations.com"
+                    href="https://www.crediblesimulations.com"
                     color="#FFFFFF"
                     fontWeight="500"
                     lineHeight={{ base: "20px", md: "24px" }}
-                    fontSize={{ base: "14px", md: "16px" }}
+                    fontSize={{ base: "10px", md: "16px" }}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
