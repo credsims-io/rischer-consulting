@@ -163,14 +163,27 @@ export default function Footer() {
                 py={4}
                 justify="space-between"
             >
-                <Text
-                    color="#FFFFFF"
-                    fontWeight="500"
-                    lineHeight={{ base: "20px", md: "24px" }}
-                    fontSize={{ base: "10px", md: "16px" }}
-                >
-                    &copy; 2024-2025 Rischer Consulting
-                </Text>
+                <Flex direction={{ base: "row", md: "row" }} gap={4}>
+                    <Text
+                        color="#FFFFFF"
+                        fontWeight="500"
+                        lineHeight={{ base: "20px", md: "24px" }}
+                        fontSize={{ base: "10px", md: "16px" }}
+                    >
+                        &copy; 2024-2025 Rischer Consulting
+                    </Text>
+                    <Link
+                        href="/images/rischerconsulting_privacy_policy.pdf"
+                        color="#FFFFFF"
+                        fontWeight="500"
+                        lineHeight={{ base: "20px", md: "24px" }}
+                        fontSize={{ base: "10px", md: "16px" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Privacy policy
+                    </Link>
+                </Flex>
                 <Link
                     href="https://www.crediblesimulations.com"
                     color="#FFFFFF"
