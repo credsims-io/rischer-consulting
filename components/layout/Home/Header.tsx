@@ -66,7 +66,7 @@ export default function Header() {
                             rounded="4px"
                             fontWeight="700"
                             as="a"
-                            href="/contact"
+                            href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979"
                             size={{ base: "md", md: "lg" }}
                         >
                             Contact Us

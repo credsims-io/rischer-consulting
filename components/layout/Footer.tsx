@@ -145,7 +145,7 @@ export default function Footer() {
                         </Link>
                     </Flex>
                     <Flex align="center" justify="center" gap={4} mt={4} fontSize={{ base: "18px", md: "20px" }}>
-                        <Link href="/contact" color="#667085">
+                        <Link href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979" color="#667085">
                             Contact
                         </Link>
                         <Link color="#667085" href="/">

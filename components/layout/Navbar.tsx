@@ -47,7 +47,7 @@ const navItems: NavItem[] = [
     // },
     // { name: 'Clients', path: '/clients' },
     { name: 'Contracts & Capabilities', path: '/capabilities' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: 'https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979' },
     // { name: 'Courses', path: '/courses' },
     // { name: 'Team', path: '/team' },
     // { name: 'Reviews', path: '/reviews' },
