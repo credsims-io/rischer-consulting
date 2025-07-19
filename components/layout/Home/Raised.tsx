@@ -14,7 +14,7 @@ export default function Raised() {
 
     useEffect(() => {
         if (isInView) {
-            const target = 25842935.00;
+            const target = 27934561.00;
             const duration = 2000; // 2 seconds
             const startTime = Date.now();
 

@@ -21,7 +21,7 @@ const courses = [
         price: "$69.99",
         buttonText: "Register Here",
         imageUrl: "/images/launching.png", // Replace with the correct image path
-        url: "https://rischer-consulting.ck.page/products/grant-opportunities"
+        url: "https://rischerconsultingonlinecourses.thinkific.com/courses/LaunchYourLegacy"
     },
     {
         title: "Six Tenets to Grant Writing",
