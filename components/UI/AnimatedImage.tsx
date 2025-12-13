@@ -40,7 +40,6 @@ export default function AnimatedImage({ src, alt, priority = false }: AnimatedIm
                 src={src}
                 alt={alt}
                 fill
-                unoptimized
                 priority={priority}
                 style={{
                     objectFit: 'cover',
