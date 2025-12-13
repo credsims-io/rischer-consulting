@@ -38,6 +38,7 @@ export default function Team() {
                                     src={`${member.image}`}
                                     alt={member.name}
                                     fill
+                                    unoptimized
                                     style={{ objectFit: 'contain' }}
                                 />
                             </Box>
