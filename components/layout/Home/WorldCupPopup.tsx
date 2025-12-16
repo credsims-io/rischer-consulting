@@ -56,7 +56,7 @@ export default function WorldCupPopup() {
                             Business Readiness Hub
                         </Text>
                         <Text color="#D0D5DD" fontSize={{ base: "sm", md: "md" }}>
-                            $500M-$700M+ in impact and 650,000+ international visitors are headed to North Texas. Dive into the landing overview, copy deck, and FAQ to see how prepared businesses capture 3-5x more revenue.
+                            $500M-$700M in projected impact and 650,000+ international visitors are headed to North Texas. Programs launch January 15 and enrollment closes February 28—businesses that prepare now routinely capture 3-5x more revenue.
                         </Text>
                     </Flex>
                 </ModalHeader>
