@@ -23,6 +23,14 @@ const navItems: NavItem[] = [
     { name: 'Grants', path: '/services/grants' },
     { name: 'Coaching & Training', path: '/services/team-training' },
     { name: 'Strategic Planning', path: '/services/strategic-planning' },
+    {
+        name: 'FIFA 2026',
+        path: '/world-cup-2026',
+        subItems: [
+            { name: 'About', path: '/world-cup-2026/landing' },
+            { name: 'FAQ', path: '/world-cup-2026/faq' }
+        ]
+    },
     // {
     //     name: 'Services',
     //     path: '/services',
@@ -108,22 +116,57 @@ export default function Navbar() {
                     fontSize={{ lg: "12px", xl: "14px", "2xl": "16px" }}
                 >
                     {navItems.map((item) => (
-                        <NextLink
-                            key={item.name}
-                            href={item.path}
-                            passHref
-                            legacyBehavior
-                        >
-                            <Text
-                                as="a"
-                                cursor="pointer"
-                                color={isActive(item.path) ? "#F49953" : "#667085"}
-                                _hover={{ color: "#F49953" }}
-                                fontWeight={isActive(item.path) ? "bold" : "normal"}
+                        item.subItems ? (
+                            <Menu key={item.name} isLazy>
+                                <MenuButton
+                                    as={Button}
+                                    variant="ghost"
+                                    rightIcon={<ChevronDownIcon />}
+                                    color={isActive(item.path) ? "#F49953" : "#667085"}
+                                    fontWeight={isActive(item.path) ? "bold" : "normal"}
+                                    _hover={{ color: "#F49953" }}
+                                    px={2}
+                                >
+                                    {item.name}
+                                </MenuButton>
+                                <MenuList>
+                                    {item.subItems.map((subItem) => (
+                                        <NextLink
+                                            key={subItem.name}
+                                            href={subItem.path}
+                                            passHref
+                                            legacyBehavior
+                                        >
+                                            <MenuItem
+                                                as="a"
+                                                color={isActive(subItem.path) ? "#F49953" : "#667085"}
+                                                fontWeight={isActive(subItem.path) ? "bold" : "normal"}
+                                                _hover={{ color: "#F49953" }}
+                                            >
+                                                {subItem.name}
+                                            </MenuItem>
+                                        </NextLink>
+                                    ))}
+                                </MenuList>
+                            </Menu>
+                        ) : (
+                            <NextLink
+                                key={item.name}
+                                href={item.path}
+                                passHref
+                                legacyBehavior
                             >
-                                {item.name}
-                            </Text>
-                        </NextLink>
+                                <Text
+                                    as="a"
+                                    cursor="pointer"
+                                    color={isActive(item.path) ? "#F49953" : "#667085"}
+                                    _hover={{ color: "#F49953" }}
+                                    fontWeight={isActive(item.path) ? "bold" : "normal"}
+                                >
+                                    {item.name}
+                                </Text>
+                            </NextLink>
+                        )
                     ))}
                 </Flex>
 
