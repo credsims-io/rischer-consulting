@@ -102,6 +102,7 @@ export default function Navbar() {
                     <Image
                         src="/images/nav_logo.png"
                         alt="Rischer Consulting"
+                        unoptimized
                         width={300}
                         height={60}
                         style={{
