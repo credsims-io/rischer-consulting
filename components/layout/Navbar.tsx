@@ -27,8 +27,11 @@ const navItems: NavItem[] = [
         name: 'FIFA 2026',
         path: '/world-cup-2026',
         subItems: [
-            { name: 'About', path: '/world-cup-2026/landing' },
-            { name: 'FAQ', path: '/world-cup-2026/faq' }
+            { name: 'Readiness Brief', path: '/world-cup-2026/landing' },
+            { name: 'Campaign Copy', path: '/world-cup-2026/copy' },
+            { name: 'FAQ', path: '/world-cup-2026/faq' },
+            { name: 'Meet the Team', path: '/world-cup-2026/team' },
+            { name: 'Discovery Call', path: '/world-cup-2026/discovery' },
         ]
     },
     // {

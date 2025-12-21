@@ -28,12 +28,14 @@ export async function POST(request: Request) {
         });
 
         // Email content
+        const contact_emails = process.env.CONTACT_EMAILS?.split(',') || [];
+        console.log("Contact Emails:", contact_emails);
         const mailOptions = {
             from: process.env.SMTP_FROM_EMAIL,
-            to: process.env.CONTACT_EMAIL,
-            subject: `New Contact Form Submission from ${name}`,
+            to: contact_emails,
+            subject: `FIFA 2026 Discovery Call | ${name}`,
             html: `
-                <h2>New Contact Form Submission</h2>
+                <h2>FIFA World Cup 2026 Discovery Call Request</h2>
                 <h3>Contact Information</h3>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
@@ -46,15 +48,14 @@ export async function POST(request: Request) {
                 
                 <h3>Budget Information</h3>
                 <p><strong>Operating Budget:</strong> ${operatingBudget}</p>
-                <p><strong>Grant Services Budget:</strong> ${grantServicesBudget}</p>
+                <p><strong>World Cup Preparation Budget:</strong> ${grantServicesBudget}</p>
                 
-                <h3>Additional Information</h3>
+                <h3>World Cup Readiness Focus</h3>
                 <p><strong>Interested Service:</strong> ${interestedService}</p>
                 <p><strong>How they heard about us:</strong> ${hearAboutUs}</p>
             `,
-            // Add a text version for email clients that don't support HTML
             text: `
-                New Contact Form Submission
+                FIFA World Cup 2026 Discovery Call Request
                 
                 Contact Information:
                 Name: ${name}
@@ -68,9 +69,9 @@ export async function POST(request: Request) {
                 
                 Budget Information:
                 Operating Budget: ${operatingBudget}
-                Grant Services Budget: ${grantServicesBudget}
+                World Cup Preparation Budget: ${grantServicesBudget}
                 
-                Additional Information:
+                World Cup Readiness Focus:
                 Interested Service: ${interestedService}
                 How they heard about us: ${hearAboutUs}
             `,

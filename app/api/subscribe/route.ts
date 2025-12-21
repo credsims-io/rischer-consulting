@@ -3,7 +3,10 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
     try {
-        const { email } = await request.json();
+        const { email, name } = await request.json();
+        if (!email) {
+            return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+        }
 
         // Create transporter
         const transporter = nodemailer.createTransport({
@@ -17,16 +20,19 @@ export async function POST(request: Request) {
         });
 
         // Email content
+        const contact_emails = process.env.CONTACT_EMAILS?.split(',') || [];
         const mailOptions = {
             from: process.env.SMTP_FROM_EMAIL,
-            to: ['Regina.adolfo@rischerconsulting.com', 'info.rischerconsulting.com'],
-            subject: 'New Newsletter Subscription',
+            to: contact_emails,
+            subject: 'New Newsletter / FIFA 2026 Subscription',
             html: `
                 <h2>New Newsletter Subscription</h2>
+                ${name ? `<p><strong>Name:</strong> ${name}</p>` : ''}
                 <p><strong>Email:</strong> ${email}</p>
             `,
             text: `
                 New Newsletter Subscription
+                ${name ? `Name: ${name}\n` : ''}
                 Email: ${email}
             `,
         };
