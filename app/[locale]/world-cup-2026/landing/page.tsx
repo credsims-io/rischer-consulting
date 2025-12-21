@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import NextLink from "next/link";
 import {
     Badge,
     Box,
@@ -10,7 +11,7 @@ import {
     Text
 } from "@chakra-ui/react";
 
-const discoveryLink = "https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979";
+const discoveryLink = "/world-cup-2026/discovery";
 const metrics = [
     { label: "International visitors projected", value: "650,000+" },
     { label: "Economic impact forecast", value: "$500M–$700M+" },
@@ -110,10 +111,8 @@ export default function LandingConceptPage() {
                         </Text>
                         <Flex direction={{ base: "column", md: "row" }} gap={4}>
                             <Button
-                                as="a"
+                                as={NextLink}
                                 href={discoveryLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 bg="#F49953"
                                 color="#121212"
                                 fontWeight="700"
@@ -283,10 +282,8 @@ export default function LandingConceptPage() {
                         We'll assess your readiness, identify opportunities, and create your action plan—no obligation.
                     </Text>
                     <Button
-                        as="a"
+                        as={NextLink}
                         href={discoveryLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         bg="#F49953"
                         color="#121212"
                         fontWeight="700"
@@ -299,7 +296,7 @@ export default function LandingConceptPage() {
                     <Stack spacing={2} color="#EAECF0">
                         <Text>Phone: <a href="tel:+12148105516">+1 (214) 810-5516</a></Text>
                         <Text>Email: <a href="mailto:info@rischerconsulting.com">info@rischerconsulting.com</a></Text>
-                        <Text>Website: <a href="https://www.rischerconsulting.com" target="_blank" rel="noreferrer">www.rischerconsulting.com</a></Text>
+                        <Text>Website: <a href="https://www.rischerconsulting.com" target="_blank" rel="noopener noreferrer">www.rischerconsulting.com</a></Text>
                     </Stack>
                 </Box>
             </Flex>

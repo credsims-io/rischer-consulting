@@ -1,11 +1,12 @@
 'use client';
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
     Box,
     Button,
     Flex,
+    Input,
     Modal,
     ModalBody,
     ModalCloseButton,
@@ -13,12 +14,18 @@ import {
     ModalFooter,
     ModalHeader,
     ModalOverlay,
+    Stack,
     Text,
-    useDisclosure
+    useDisclosure,
+    useToast
 } from "@chakra-ui/react";
 
 export default function WorldCupPopup() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const toast = useToast();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         const timer = window.setTimeout(() => {
@@ -31,9 +38,47 @@ export default function WorldCupPopup() {
         onClose();
     };
 
+    const handleSignup = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (!name || !email) return;
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email }),
+            });
+            if (response.ok) {
+                setName("");
+                setEmail("");
+                toast({
+                    title: "You're on the list",
+                    description: "We'll send key World Cup readiness updates to your inbox.",
+                    status: "success",
+                    duration: 5000,
+                    isClosable: true,
+                });
+            } else {
+                throw new Error("Subscription failed");
+            }
+        } catch (error) {
+            toast({
+                title: "Something went wrong",
+                description: "Please try again or contact info@rischerconsulting.com.",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     const ctaButtons = [
-        { label: "Learn More", href: "/world-cup-2026/landing" },
-        // { label: "Campaign Copy Toolkit", href: "/world-cup-2026/copy" },
+        { label: "Readiness Brief", href: "/world-cup-2026/landing" },
+        { label: "Campaign Copy Toolkit", href: "/world-cup-2026/copy" },
         { label: "Business FAQ", href: "/world-cup-2026/faq" },
     ];
 
@@ -78,6 +123,43 @@ export default function WorldCupPopup() {
                         <Text color="#EAECF0" fontSize="sm">
                             World Cup starts June 11, 2026. Programs launch January 15 and enrollment ends February 28. Every week of readiness counts.
                         </Text>
+                        <Box
+                            as="form"
+                            mt={4}
+                            onSubmit={handleSignup}
+                        >
+                            <Stack spacing={3}>
+                                <Input
+                                    placeholder="Full name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    bg="rgba(255,255,255,0.08)"
+                                    color="#FFFFFF"
+                                    _placeholder={{ color: "rgba(255,255,255,0.7)" }}
+                                    required
+                                />
+                                <Input
+                                    type="email"
+                                    placeholder="Email address"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    bg="rgba(255,255,255,0.08)"
+                                    color="#FFFFFF"
+                                    _placeholder={{ color: "rgba(255,255,255,0.7)" }}
+                                    required
+                                />
+                                <Button
+                                    type="submit"
+                                    bg="#FFFFFF"
+                                    color="#121212"
+                                    fontWeight="700"
+                                    _hover={{ bg: "#EAECF0" }}
+                                    isLoading={isSubmitting}
+                                >
+                                    Get World Cup Updates
+                                </Button>
+                            </Stack>
+                        </Box>
                     </Box>
                 </ModalBody>
                 <ModalFooter
@@ -89,7 +171,7 @@ export default function WorldCupPopup() {
                 >
                     <Button
                         as={Link}
-                        href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979"
+                        href="/world-cup-2026/discovery"
                         onClick={handleDismiss}
                         bg="#F49953"
                         color="#121212"

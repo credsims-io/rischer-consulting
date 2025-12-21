@@ -1,7 +1,8 @@
 import { Metadata } from "next";
+import NextLink from "next/link";
 import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 
-const discoveryLink = "https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979";
+const discoveryLink = "/world-cup-2026/discovery";
 
 const narrativeBlocks = [
     {
@@ -155,10 +156,8 @@ export default function CampaignCopyPage() {
 function ButtonLink() {
     return (
         <Box
-            as="a"
+            as={NextLink}
             href={discoveryLink}
-            target="_blank"
-            rel="noopener noreferrer"
             bg="#F49953"
             color="#121212"
             fontWeight="700"

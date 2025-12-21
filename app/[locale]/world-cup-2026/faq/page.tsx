@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import NextLink from "next/link";
 import {
     Accordion,
     AccordionButton,
@@ -10,7 +11,7 @@ import {
     Text
 } from "@chakra-ui/react";
 
-const discoveryLink = "https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979";
+const discoveryLink = "/world-cup-2026/discovery";
 
 const faqs = [
     {
@@ -192,10 +193,8 @@ export default function FaqPage() {
                 </Text>
                 <Flex direction={{ base: "column", md: "row" }} align="center" gap={4}>
                     <Box
-                        as="a"
+                        as={NextLink}
                         href={discoveryLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         bg="#121212"
                         color="#FFFFFF"
                         fontWeight="700"
