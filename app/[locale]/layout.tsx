@@ -132,6 +132,11 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Mailchimp */}
+        <Script id="mcjs" strategy="afterInteractive">
+          {`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7be254429af9d0575effb337f/a9472a79407110c921494084d.js");`}
+        </Script>
+
         {/* Facebook Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
