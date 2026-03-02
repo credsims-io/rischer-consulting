@@ -107,7 +107,7 @@ export default function LandingConceptPage() {
                             </Text>
                         </Box>
                         <Text fontSize={{ base: "16px", md: "20px" }} color="#EAECF0" maxW="720px">
-                            3M+ people impacted. $1B+ economic impact. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
+                            3M+ international visitors. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
                         </Text>
                         <Flex direction={{ base: "column", md: "row" }} gap={4}>
                             <Button
