@@ -13,8 +13,8 @@ import {
 
 const discoveryLink = "/world-cup-2026/discovery";
 const metrics = [
-    { label: "International visitors projected", value: "650,000+" },
-    { label: "Economic impact forecast", value: "$500M–$700M+" },
+    { label: "People impacted", value: "3M+" },
+    { label: "Economic impact forecast", value: "$1B+" },
     { label: "Days until kickoff", value: "5 months" },
 ];
 
@@ -103,11 +103,11 @@ export default function LandingConceptPage() {
                                 lineHeight="1.1"
                                 mt={3}
                             >
-                                Is Your Business Ready for $500M-$700M+ in Economic Impact?
+                                Is Your Business Ready for $1B+ in Economic Impact?
                             </Text>
                         </Box>
                         <Text fontSize={{ base: "16px", md: "20px" }} color="#EAECF0" maxW="720px">
-                            650,000+ international visitors. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
+                            3M+ people impacted. $1B+ economic impact. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
                         </Text>
                         <Flex direction={{ base: "column", md: "row" }} gap={4}>
                             <Button
