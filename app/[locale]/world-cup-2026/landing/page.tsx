@@ -13,7 +13,7 @@ import {
 
 const discoveryLink = "/world-cup-2026/discovery";
 const metrics = [
-    { label: "International visitors projected", value: "3M+" },
+    { label: "International visitors projected", value: "3M–4M+" },
     { label: "Economic impact forecast", value: "$1B+" },
     { label: "Days until kickoff", value: "100 days" },
 ];
@@ -107,7 +107,7 @@ export default function LandingConceptPage() {
                             </Text>
                         </Box>
                         <Text fontSize={{ base: "16px", md: "20px" }} color="#EAECF0" maxW="720px">
-                            3M+ international visitors. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
+                            3M–4M+ international visitors. Millions in revenue potential for prepared businesses. World Cup starts June 11, 2026—just five months away.
                         </Text>
                         <Flex direction={{ base: "column", md: "row" }} gap={4}>
                             <Button
