@@ -15,7 +15,7 @@ const discoveryLink = "/world-cup-2026/discovery";
 const metrics = [
     { label: "International visitors projected", value: "3M–4M+" },
     { label: "Economic impact forecast", value: "$1B+" },
-    { label: "Days until kickoff", value: "100 days" },
+    { label: "Days until kickoff", value: "86 days" },
 ];
 
 const preparednessList = [
