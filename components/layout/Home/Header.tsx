@@ -4,7 +4,7 @@ import React from 'react'
 import AnimatedImage from '@/components/UI/AnimatedImage';
 
 const heroStats = [
-    { value: "$28M+", label: "Funding secured for clients" },
+    { value: "$29M+", label: "Funding secured for clients" },
     { value: "25+", label: "Large-scale activations delivered" },
     { value: "300%", label: "Avg. revenue lift for prepared teams" },
 ];
@@ -118,7 +118,7 @@ export default function Header() {
                             href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979"
                             size={{ base: "md", md: "lg" }}
                         >
-                            Contact Us
+                            Book a Funding Readiness Audit
                         </Button>
                     </Flex>
                     <SimpleGrid columns={{ base: 1, sm: heroStats.length }} spacing={{ base: 4, sm: 6 }}>

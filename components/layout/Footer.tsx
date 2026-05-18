@@ -129,10 +129,31 @@ export default function Footer() {
                 </Flex>
                 <Flex align="center" justify="center" direction="column">
                     <Text color="#000000" fontSize="24px">RISCHER CONSULTING</Text>
-                    <Flex align="center" justify="center" gap={6} mt={6}>
-                        <Image src="/images/badge1.png" alt="Rischer Consulting" width={96} height={96} />
-                        <Image src="/images/badge2.png" alt="Rischer Consulting" width={96} height={96} />
+                    <Text color="#667085" fontSize="13px" textAlign="center" mt={2} maxW="260px" lineHeight="1.5">
+                        You run the mission. We build the systems that fund it.
+                    </Text>
+                    <Flex align="center" justify="center" gap={4} mt={4} wrap="wrap">
+                        <Image src="/images/badge_mbe.png" alt="NMSDC MBE Certified" width={80} height={80} style={{ objectFit: "contain" }} />
+                        <Image src="/images/badge2.png" alt="SBA EDWOSB Certified" width={80} height={80} style={{ objectFit: "contain" }} />
+                        <Image src="/images/badge1.png" alt="Certified Black-Owned Business" width={80} height={80} style={{ objectFit: "contain" }} />
                     </Flex>
+                    <Flex align="center" justify="center" gap={2} mt={3} wrap="wrap">
+                        {["M/WBE", "EDWOSB", "HUB"].map((cert) => (
+                            <Box
+                                key={cert}
+                                as="span"
+                                px={2}
+                                py={1}
+                                bg="#F49953"
+                                color="#FFFFFF"
+                                fontSize="11px"
+                                fontWeight="700"
+                                rounded="4px"
+                                letterSpacing="0.05em"
+                            >
+                                {cert}
+                            </Box>
+                        ))}</Flex>
                     <Flex align="center" justify="center" gap={4} mt={4}>
                         <Link href="https://www.instagram.com/rischer_consulting/" target="_blank" rel="noopener noreferrer">
                             <InstagramFooterIcon />
@@ -170,7 +191,7 @@ export default function Footer() {
                         lineHeight={{ base: "20px", md: "24px" }}
                         fontSize={{ base: "10px", md: "16px" }}
                     >
-                        &copy; 2024-2025 Rischer Consulting
+                        &copy; 2024-2026 Rischer Consulting
                     </Text>
                     <Link
                         href="/images/rischerconsulting_privacy_policy.pdf"
@@ -184,17 +205,15 @@ export default function Footer() {
                         Privacy policy
                     </Link>
                 </Flex>
-                <Link
-                    href="https://www.crediblesimulations.com"
+                <Text
                     color="#FFFFFF"
                     fontWeight="500"
                     lineHeight={{ base: "20px", md: "24px" }}
-                    fontSize={{ base: "10px", md: "16px" }}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    fontSize={{ base: "10px", md: "14px" }}
+                    display={{ base: "none", md: "block" }}
                 >
-                    Website powered by Credible Simulations
-                </Link>
+                    Certified M/WBE · EDWOSB · HUB
+                </Text>
 
             </Flex>
         </footer>

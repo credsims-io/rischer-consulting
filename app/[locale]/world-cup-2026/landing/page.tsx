@@ -30,7 +30,7 @@ const preparednessList = [
 
 const services = [
     { title: "Strategic Assessment & Planning", detail: "Comprehensive capacity analysis and customized roadmap." },
-    { title: "Funding & Grant Development", detail: "Secure capital to finance preparation – $28M+ secured since 2015." },
+    { title: "Funding & Grant Development", detail: "Secure capital to finance preparation – $29M+ secured since 2015." },
     { title: "Operational Capacity Building", detail: "Systems and processes for high-volume excellence." },
     { title: "Cultural Competency Training", detail: "Authentic service for diverse international visitors." },
     { title: "Marketing & Partnerships", detail: "Strategic positioning and partnerships that drive traffic." },

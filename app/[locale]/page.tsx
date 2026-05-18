@@ -4,7 +4,6 @@ import Header from "@/components/layout/Home/Header";
 import Raised from "@/components/layout/Home/Raised";
 import Reviews from "@/components/layout/Home/Reviews";
 import Welcome from "@/components/layout/Home/Welcome";
-import WorldCupPopup from "@/components/layout/Home/WorldCupPopup";
 import { Flex } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default async function Home() {
 
   return (
     <>
-      <WorldCupPopup />
       <Flex
         direction="column"
         paddingX={{ base: 2, md: 4 }}
