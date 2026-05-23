@@ -1,6 +1,6 @@
 "use client"
 
-import { FacebookFooterIcon, InstagramFooterIcon, LinkedInFooterIcon, YoutubeFooterIcon } from "@/public/assets";
+import { FacebookFooterIcon, InstagramFooterIcon, LinkedInFooterIcon } from "@/public/assets";
 import { Box, Button, Checkbox, CheckboxGroup, Flex, Input, Link, Text, useToast } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState, FormEvent } from "react";
@@ -166,8 +166,8 @@ export default function Footer() {
                         </Link>
                     </Flex>
                     <Flex align="center" justify="center" gap={4} mt={4} fontSize={{ base: "18px", md: "20px" }}>
-                        <Link href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979" color="#667085" target="_blank" rel="noopener noreferrer">
-                            Contact
+                        <Link href="https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule" color="#667085" target="_blank" rel="noopener noreferrer">
+                            Book a Call
                         </Link>
                         <Link color="#667085" href="/">
                             Website

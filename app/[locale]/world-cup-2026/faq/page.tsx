@@ -32,7 +32,7 @@ const faqs = [
     {
         question: "What makes Rischer Consulting qualified to provide World Cup preparation services?",
         answer: [
-            "Rischer Consulting brings nearly a decade of capacity building expertise, over $25 million in secured funding for clients, federal grant reviewer credentials (U.S. Departments of Education and Labor), strategic planning experience with dozens of organizations, and deep cultural competency as a certified M/WBE, EDWBE, and HUB business.",
+            "Rischer Consulting brings nearly a decade of capacity building expertise, $29M+ in secured funding for clients, federal grant reviewer credentials (U.S. Departments of Education and Labor), strategic planning experience with dozens of organizations, and deep cultural competency as a certified M/WBE, EDWBE, and HUB business.",
             "We've studied successful World Cup preparation models from previous host cities (including Seattle, Kansas City, and international locations) and developed a comprehensive framework specifically tailored for Dallas/Fort Worth businesses.",
             "Our CEO, Shaniqua Rischer, combines grant writing expertise, strategic planning skills, and leadership development experience to provide holistic World Cup readiness support. Additionally, we have a team of qualified experts including Special Event Director and Managers, High Capacity Sport Venue and Restaurant Directors, Business Trainers, and more."
         ]

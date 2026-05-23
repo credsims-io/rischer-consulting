@@ -4,9 +4,10 @@ import React from 'react'
 import AnimatedImage from '@/components/UI/AnimatedImage';
 
 const heroStats = [
-    { value: "$29M+", label: "Funding secured for clients" },
-    { value: "25+", label: "Large-scale activations delivered" },
-    { value: "300%", label: "Avg. revenue lift for prepared teams" },
+    { value: "$29M+", label: "Grants stewarded since 2015" },
+    { value: "3×", label: "ROI for clients 1+ year" },
+    { value: "100K+", label: "Professionals trained" },
+    { value: "25+", label: "Years Fortune 500 strategy" },
 ];
 
 export default function Header() {
@@ -76,23 +77,28 @@ export default function Header() {
                     <Text
                         maxWidth="640px"
                         color="#FFFFFF"
-                        fontSize={{ base: "40px", md: "72px" }}
+                        fontSize={{ base: "32px", md: "56px" }}
                         fontWeight="500"
-                        letterSpacing={{ base: "1.2px", md: "2.16px" }}
+                        letterSpacing={{ base: "0.5px", md: "1px" }}
                         mt={{ base: 12, md: 0 }}
+                        lineHeight={{ base: "1.2", md: "1.15" }}
                         className='font-playfair'
                     >
-                        Consulting with Integrity
+                        Federally-credentialed grant strategy and organizational capacity for social-impact organizations.
                     </Text>
                     <Text
-                        fontSize={{ base: "16px", md: "24px" }}
-                        color="#FFFFFF"
-                        fontWeight="500"
-                        mt={4}
+                        fontSize={{ base: "16px", md: "20px" }}
+                        color="#E4E7EC"
+                        fontWeight="400"
+                        mt={2}
+                        maxW="600px"
                     >
-                        Professional services that will allow for growth and success.
+                        $29M+ stewarded across education, workforce, international development, nonprofit — and now extending into community health.
                     </Text>
-                    <Flex mt={8} align='center' gap={4}>
+                    <Text fontSize={{ base: "12px", md: "14px" }} color="rgba(255,255,255,0.75)" letterSpacing="0.05em">
+                        Certified M/WBE · EDWOSB · HUB &nbsp;·&nbsp; Federal Grant Peer Reviewer, U.S. DOE &amp; U.S. DOL
+                    </Text>
+                    <Flex mt={6} align='center' gap={4} wrap="wrap">
                         <Button
                             bg="#F49953"
                             paddingX={{ base: 4, md: 6 }}
@@ -101,10 +107,12 @@ export default function Header() {
                             rounded="4px"
                             fontWeight="700"
                             as="a"
-                            href="/courses"
+                            href="https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             size={{ base: "md", md: "lg" }}
                         >
-                            Courses and E-books
+                            Schedule a Capabilities Conversation
                         </Button>
                         <Button
                             bg="transparent"
@@ -115,10 +123,12 @@ export default function Header() {
                             rounded="4px"
                             fontWeight="700"
                             as="a"
-                            href="https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979"
+                            href="/assets/capabilities_statement.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             size={{ base: "md", md: "lg" }}
                         >
-                            Book a Funding Readiness Audit
+                            Download Capabilities One-Pager
                         </Button>
                     </Flex>
                     <SimpleGrid columns={{ base: 1, sm: heroStats.length }} spacing={{ base: 4, sm: 6 }}>
