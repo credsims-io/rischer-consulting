@@ -11,7 +11,7 @@ export default function Clients() {
         >
             <Flex
                 direction="column"
-                alignItems={{ base: "start", xl: "center" }}
+                alignItems="center"
                 justifyContent="center"
                 height="100%"
             >
@@ -26,7 +26,7 @@ export default function Clients() {
                 </Text>
                 <Text
                     color="#667085"
-                    textAlign="justify"
+                    textAlign="center"
                     fontSize={{ base: "16px", md: "24px" }}
                     fontWeight="500"
                     lineHeight={{ base: "24px", md: "32px" }}
