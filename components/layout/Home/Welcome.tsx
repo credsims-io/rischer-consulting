@@ -30,15 +30,15 @@ export default function Welcome() {
                     lineHeight={{ base: "24px", md: "32px" }}
                     textAlign="start"
                 >
-                    Rischer Consulting, an EDWOSB and M/WBE certified firm, empowers Social Impact Organizations to optimize organizational performance, secure and position for essential funding, and develop talent to execute their mission and successfully bring their vision to fruition. Our company rests on the pillars of integrity and impeccable execution, fostering a collaborative journey with executive management teams.
+                    Rischer Consulting is a federally-credentialed, certified M/WBE · EDWOSB · HUB grant-strategy and organizational capacity firm. Founded in 2015, we partner with social-impact organizations — in education, workforce development, international development, nonprofit, and community health — to secure funding, build capacity, and develop the leaders who carry the mission forward.
 
                     <br />
                     <br />
-                    We provide 360-premium tailored solutions for grant research, writing, and acquisition; comprehensive training and development for leaders and teams; and strategic planning for holistic community advancement with 3x return on investment for clients with us greater than a year.
+                    We have stewarded $29M+ in competitive grants across sectors, delivered 3× ROI for clients with us longer than a year, and trained 100K+ professionals. Our principal, Shaniqua Rischer, serves as a Federal Grant Peer Reviewer for the U.S. Departments of Education and Labor — meaning we evaluate applications by the same standard the government applies.
 
                     <br />
                     <br />
-                    Join us on this personalized expedition towards success, where your goals become our shared triumphs.
+                    You run the mission. We build the systems that fund it.
                 </Text>
                 <Box>
                     <Button

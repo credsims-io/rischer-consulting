@@ -1,207 +1,162 @@
-import { CheckIcon } from '@/public/assets';
-import { Box, Flex, Text } from '@chakra-ui/react';
-import Image from 'next/image';
-import React from 'react'
 import { Metadata } from "next";
+import { Box, Button, Flex, Grid, SimpleGrid, Text } from "@chakra-ui/react";
+import ThreeWaysToStart from "@/components/layout/ThreeWaysToStart";
 
 export const metadata: Metadata = {
-    title: "Team Training and Development | Rischer Consulting",
-    description: "Specialized team training and workforce development services to drive sustainable business growth and cultivate high-performing teams.",
-    keywords: ["team training", "workforce development", "leadership training", "skill building workshops", "team development"],
+    title: "Team Training & Development | Rischer Consulting",
+    description: "Customizable team training programs that build high-performing, results-driven teams for nonprofits, government agencies, and social-sector organizations.",
+    keywords: ["team training", "workforce development", "leadership training", "skill building workshops"],
 };
 
-export default function page() {
+const DUBSADO_LINK = "https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule";
 
-    const trainingInformation = {
-        "pageTitle": "Coaching & Training",
-        "image": "/images/training.png",
-        "pageSubtitle": "Rischer Consulting specializes in cultivating and refining your workforce to drive sustainable business growth.",
-        "sections": [
-            {
-                "title": "Innovative Training",
-                "content": [
-                    "The heartbeat of any successful business lies in its workforce. Effective training and workforce development are pivotal in driving growth across all industries. In the dynamic landscape of today's workforce, the key lies in identifying dedicated stakeholders within the business community who champion economic opportunities and development for individuals of diverse skill sets.",
-                    "If you seek to forge High-Performing, Results-Driven Teams, you must invest in your greatest resource—your people. By doing so, you will develop stronger leaders, build a more cohesive team, and achieve extraordinary outcomes. Effective leadership is the cornerstone of any successful team."
-                ],
-                "featureDescription": "Rischer Consulting offers a variety of customizable training programs designed to cater to different leadership levels and team dynamics. Our interactive approach includes:",
-                "sectionImage": "/images/training-1.png",
-                "keyFeatures": [
-                    {
-                        "title": "Skill-Building Workshops",
-                        "description": "Interactive sessions focused on developing specific leadership competencies.",
-                        "subMenu": [
-                            "Building Commitment",
-                            "Building Trust",
-                            "The 5 Dysfunctions of A Team",
-                            "Critical Thinking",
-                            "GAPS Analysis"
-                        ]
-                    },
-                    {
-                        "title": "Foster Collaboration",
-                        "description": "Create a culture of teamwork and build trust among team members."
-                    },
-                    {
-                        "title": "Boost Engagement",
-                        "description": "Inspire and motivate teams to achieve peak performance."
-                    },
-                    {
-                        "title": "Equip Individuals",
-                        "description": "Develop essential leadership skills like communication, conflict resolution, delegation, and motivation."
-                    },
-                    {
-                        "title": "Empower Decision-Making",
-                        "description": "Equip leaders to make sound decisions under pressure and take initiative."
-                    }
-                ]
-            },
-            {
-                "title": "Executive Coaching",
-                "content": [
-                    "At Rischer Consulting, our coaching services begin with a comprehensive needs-assessment for individuals and the organization. This ensures that our approach is tailored to address specific goals and challenges, ultimately leading to success at both levels. Our coaching philosophy is grounded in evidence-based positive psychology, a deliberate, results-oriented methodology characterized by deep respect, honesty, and action steps. Our commitment to providing deep care and inspiration sets us apart, guiding clients toward their desired outcomes with passion and empathy."
-                ],
-                "featureDescription": "Our coaching strategies are founded on the latest research in the following areas:",
-                "sectionImage": "/images/coaching-1.png",
-                "keyFeatures": [
-                    {
-                        "title": "Research Areas",
-                        "description": "",
-                        "subMenu": [
-                            "Human behavior",
-                            "Adult learning",
-                            "Social trust impact",
-                            "Neuroscience",
-                            "Organizational dynamics"
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Solo Entrepreneur and Entrepreneur Coach",
-                "content": [
-                    "We work specifically with individuals in business for themselves in one-employee businesses, helping them clarify their purpose and vision, increase efficiency and productivity, and provide a sounding board in an often-isolated work environment."
-                ],
-            },
-            {
-                "title": "Organizational Coach",
-                "content": [
-                    "Teamwork makes the dream work! Sometimes, the team needs bolstering to improve the health of the overall organization. Rischer Consulting focuses on strengthening employees psychological capital to improve the overall organization.",
-                    "This strategy allows employees to maximize their coaching services for emerging and advanced leaders, helping them develop a personal foundation and decision-making skills to excel in leadership positions"
-                ],
-                "sectionImage": "/images/coaching-2.png"
-            }
-        ]
-    }
-
-    const {
-        pageTitle,
-        pageSubtitle,
-        image,
-        sections
-    } = trainingInformation;
-
-
+export default function TeamTrainingPage() {
     return (
         <Flex
             direction="column"
             px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
             paddingY={{ base: 8, md: 4 }}
-            gap={{ base: 8, md: "80px" }}
+            gap={{ base: 10, md: "80px" }}
             mb={6}
         >
-            <Flex
-                direction="column"
-                align={{ "2xl": "center" }}
-                textAlign={{ "2xl": "center" }}
-                gap={6}
-            >
+            {/* Hero */}
+            <Flex direction="column" gap={4} maxW="840px">
+                <Box
+                    display="inline-block"
+                    px={3}
+                    py={1}
+                    bg="#121212"
+                    color="#FFFFFF"
+                    fontSize="12px"
+                    fontWeight="700"
+                    rounded="4px"
+                    letterSpacing="0.1em"
+                    width="fit-content"
+                >
+                    TEAM TRAINING & DEVELOPMENT
+                </Box>
                 <Text
-                    as="h2"
-                    fontSize={{ base: "32px", lg: "64px" }}
+                    as="h1"
+                    fontSize={{ base: "36px", lg: "60px" }}
                     color="#121212"
                     fontWeight="500"
                     className="font-playfair"
+                    lineHeight="1.15"
                 >
-                    {pageTitle}
+                    100K+ professionals trained. Yours could be next.
                 </Text>
-                <Text
-                    maxW="800px"
-                    color="#667085"
-                    fontSize={{ lg: "24px" }}
-                    lineHeight={{ base: "24px", md: "32px" }}
-                >
-                    {pageSubtitle}
+                <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7">
+                    The heartbeat of any funded organization is its people. Rischer Consulting's team training programs build the skills, trust, and systems that make high-performing teams — and help them sustain their impact through leadership transitions, growth, and change.
                 </Text>
             </Flex>
-            <Flex direction="column" width="100%" >
-                <Box
-                    width="100%"
-                    maxHeight={{ base: "350px", lg: "520px" }}
-                    height={{ base: "350px", lg: "520px" }}
 
-                    backgroundImage={image ? `url(${image})` : undefined}
-                    backgroundSize="cover"
-                    backgroundPosition="center"
-                    borderRadius={{ base: "8px", md: "16px" }}
-                >
-
-                </Box>
+            {/* Who This Is For */}
+            <Flex direction="column" gap={6}>
+                <Text as="h2" fontSize={{ base: "28px", md: "40px" }} fontWeight="500" className="font-playfair" color="#121212">
+                    Who This Is For
+                </Text>
+                <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={4}>
+                    {[
+                        { title: "Nonprofit Leadership Teams", detail: "Staff at all levels who need shared frameworks, clear roles, and stronger collaboration." },
+                        { title: "Government & Public Sector Teams", detail: "Agencies building internal capacity to meet compliance, equity, and performance mandates." },
+                        { title: "Workforce Programs", detail: "Organizations building job-readiness, professional development, and career pathway curricula." },
+                        { title: "School & District Staff", detail: "Educators, administrators, and instructional coaches developing culturally responsive skills." },
+                        { title: "Board Members", detail: "Governance teams that need practical frameworks for fiduciary responsibility and strategic oversight." },
+                        { title: "New Leaders", detail: "Cohorts of emerging managers and directors ready to level up their leadership toolkit." },
+                    ].map((item) => (
+                        <Box key={item.title} border="1px solid #EAECF0" rounded="16px" p={5} bg="#FFFFFF">
+                            <Text fontWeight="700" color="#121212" fontSize="16px" mb={2}>{item.title}</Text>
+                            <Text color="#667085" fontSize="14px" lineHeight="1.5">{item.detail}</Text>
+                        </Box>
+                    ))}
+                </Grid>
             </Flex>
-            <Flex direction="column" gap={{ base: 8, md: 10 }} mx={{ lg: "200px" }}>
-                {sections.map(({ title, content, featureDescription, sectionImage, keyFeatures }, index) => (
-                    <Flex direction="column" gap={{ base: 4, md: 6 }}>
-                        <Text
-                            as="h3"
-                            fontSize={{ base: "24px", md: "48px" }}
-                            fontWeight="500"
-                            className="font-playfair"
-                            color="#121212"
-                        >
-                            {title}
+
+            {/* What We Do */}
+            <Flex direction="column" gap={6}>
+                <Text as="h2" fontSize={{ base: "28px", md: "40px" }} fontWeight="500" className="font-playfair" color="#121212">
+                    What We Do
+                </Text>
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+                    <Flex direction="column" gap={4}>
+                        <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
+                            Rischer Consulting offers customizable training programs designed for different leadership levels and team dynamics. Our interactive approach combines skill-building workshops, evidence-based frameworks, and practical application to produce lasting behavioral change — not just one-day inspiration.
                         </Text>
-                        <Flex direction="column" gap={{ base: 4, md: 6 }}>
-                            {content.map((paragraph, index) => (
-                                <Text key={index} fontSize={{ base: "16px", md: "24px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }}>{paragraph}</Text>
-                            ))}
-                        </Flex>
-                        {sectionImage &&
-                            <Box
-                                width="100%"
-                                maxHeight={{ base: "200px", lg: "460px" }}
-                                height={{ base: "200px", lg: "460px" }}
-
-                                backgroundImage={image ? `url(${sectionImage})` : undefined}
-                                backgroundSize="cover"
-                                backgroundPosition="center"
-                                borderRadius={{ base: "8px", md: "16px" }}
-                            >
-
-                            </Box>
-                        }
-                        {featureDescription && <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{featureDescription}</Text>}
-                        {keyFeatures && keyFeatures.map(({ title, description, subMenu }, index) => (
-                            <>
-                                <Flex key={index} direction="column" gap={{ base: 2, md: 4 }}>
-                                    <Flex align="start" gap={{ base: 2, md: 3 }}>
-                                        <CheckIcon />
-                                        <Flex align="center" gap={{ base: 2, md: 3 }}>
-                                            <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{title} :  {description}</Text>
-                                        </Flex>
-                                    </Flex>
-                                </Flex>
-                                {subMenu && subMenu.map((item, index) => (
-                                    <Flex key={index} align="center" px={{ md: "80px" }} gap={3}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                            <rect width="28" height="28" rx="14" fill="#F5F7E9" />
-                                        </svg>
-                                        <Text fontSize={{ md: "20px" }} color="#667085" lineHeight={{ base: "24px", md: "32px" }} fontWeight={{ md: "500" }}>{item}</Text>
-                                    </Flex>
-                                ))}
-                            </>
+                        <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
+                            We specialize in training programs that meet grant-funder expectations: documenting participant outcomes, tracking completion rates, and producing the evaluation data required for federal compliance and foundation reporting. Every training engagement is designed to be grantable.
+                        </Text>
+                    </Flex>
+                    <Flex direction="column" gap={3}>
+                        {[
+                            "Custom skill-building workshops (in-person and virtual)",
+                            "The 5 Dysfunctions of a Team facilitation",
+                            "Building trust and commitment cohort training",
+                            "Critical thinking and GAPS analysis workshops",
+                            "Culturally responsive instructional design",
+                            "Leadership pipeline and succession planning",
+                            "New leader onboarding and transition support",
+                            "Grant-aligned training program documentation",
+                        ].map((item) => (
+                            <Flex key={item} align="flex-start" gap={3}>
+                                <Box mt="6px" width="6px" height="6px" minW="6px" bg="#121212" rounded="full" />
+                                <Text fontSize="15px" color="#475467">{item}</Text>
+                            </Flex>
                         ))}
                     </Flex>
-                ))}
+                </SimpleGrid>
+            </Flex>
+
+            {/* Walk Away With */}
+            <Flex direction="column" gap={6}>
+                <Text as="h2" fontSize={{ base: "28px", md: "40px" }} fontWeight="500" className="font-playfair" color="#121212">
+                    Walk Away With
+                </Text>
+                <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={4}>
+                    {[
+                        { item: "A custom training curriculum", detail: "Designed for your team's level, context, and goals — not repurposed from an off-the-shelf program." },
+                        { item: "Participant outcome documentation", detail: "Pre/post assessments and completion data ready for funder and board reporting." },
+                        { item: "Stronger team cohesion", detail: "Shared language, frameworks, and working agreements that stick after the training ends." },
+                        { item: "A grantable training design", detail: "Documentation and logic model framing that supports future grant applications for training programs." },
+                        { item: "Ongoing learning resources", detail: "Toolkits, workbooks, and reference materials teams can use after the engagement closes." },
+                        { item: "Follow-up coaching options", detail: "Graduated support for individuals or teams who need deeper development beyond the workshop." },
+                    ].map((d) => (
+                        <Flex key={d.item} align="flex-start" gap={3} border="1px solid #EAECF0" rounded="12px" p={4} bg="#FFFFFF">
+                            <Box mt="6px" width="8px" height="8px" minW="8px" bg="#F49953" rounded="full" />
+                            <Box>
+                                <Text fontWeight="700" color="#121212" fontSize="15px">{d.item}</Text>
+                                <Text color="#667085" fontSize="14px" mt={1}>{d.detail}</Text>
+                            </Box>
+                        </Flex>
+                    ))}
+                </Grid>
+            </Flex>
+
+            {/* ThreeWaysToStart */}
+            <ThreeWaysToStart />
+
+            {/* Final CTA */}
+            <Flex direction="column" align="center" textAlign="center" gap={4}>
+                <Text fontSize={{ base: "20px", md: "28px" }} fontWeight="500" className="font-playfair" color="#121212" maxW="560px">
+                    Ready to build a training program that actually changes behavior?
+                </Text>
+                <Text color="#667085" fontSize={{ base: "15px", md: "17px" }} maxW="480px" lineHeight="1.65">
+                    Day-rate facilitation is available for board retreats, leadership cohorts, and strategic planning intensives.
+                </Text>
+                <Button
+                    as="a"
+                    href={DUBSADO_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    bg="#121212"
+                    color="#FFFFFF"
+                    fontWeight="700"
+                    size="lg"
+                    rounded="8px"
+                    _hover={{ opacity: 0.9 }}
+                >
+                    Schedule a Capabilities Conversation
+                </Button>
             </Flex>
         </Flex>
-    )
+    );
 }

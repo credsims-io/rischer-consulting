@@ -17,51 +17,25 @@ interface NavItem {
     }[];
 }
 
+const DUBSADO_LINK = 'https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule';
+
 const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Grants', path: '/services/grants' },
-    { name: 'Coaching & Training', path: '/services/team-training' },
-    { name: 'Strategic Planning', path: '/services/strategic-planning' },
     {
-        name: 'FIFA 2026',
-        path: '/world-cup-2026',
+        name: 'Services',
+        path: '/services',
         subItems: [
-            { name: 'Readiness Brief', path: '/world-cup-2026/landing' },
-            { name: 'Campaign Copy', path: '/world-cup-2026/copy' },
-            { name: 'FAQ', path: '/world-cup-2026/faq' },
-            { name: 'Meet the Team', path: '/world-cup-2026/team' },
-            { name: 'Discovery Call', path: '/world-cup-2026/discovery' },
+            { name: 'Grant Writing & Management', path: '/services/grants' },
+            { name: 'Team Training & Development', path: '/services/team-training' },
+            { name: 'Coaching & Leadership', path: '/services/coaching-leadership' },
+            { name: 'Strategic Planning', path: '/services/strategic-planning' },
+            { name: 'Contracts & Capabilities', path: '/capabilities' },
         ]
     },
-    // {
-    //     name: 'Services',
-    //     path: '/services',
-    //     subItems: [
-    //         {
-    //             name: "Grants: Research, Writing, Training & Management",
-    //             path: "/services/grants"
-    //         },
-    //         {
-    //             name: "Team Training and Development",
-    //             path: "/services/team-training"
-    //         },
-    //         {
-    //             name: "Coaching & Leadership Development",
-    //             path: "/services/coaching-leadership"
-    //         },
-    //         {
-    //             name: "Strategic Planning & Instructional Design",
-    //             path: "/services/strategic-planning"
-    //         }
-    //     ]
-    // },
-    // { name: 'Clients', path: '/clients' },
-    { name: 'Contracts & Capabilities', path: '/capabilities' },
-    { name: 'Contact', path: 'https://portal.rischerconsulting.com/public/form/view/667917c95e7fc2003a36b979' },
-    // { name: 'Courses', path: '/courses' },
-    // { name: 'Team', path: '/team' },
-    // { name: 'Reviews', path: '/reviews' },
+    { name: 'Industries', path: '/industries' },
+    { name: 'Grant Wins', path: '/grant-wins' },
+    { name: 'Insights', path: '/insights' },
+    { name: 'About', path: '/about' },
 ]
 
 export default function Navbar() {
@@ -172,6 +146,21 @@ export default function Navbar() {
                             </NextLink>
                         )
                     ))}
+                    <Button
+                        as="a"
+                        href={DUBSADO_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        bg="#F49953"
+                        color="#FFFFFF"
+                        fontWeight="700"
+                        size="sm"
+                        rounded="4px"
+                        _hover={{ bg: "#e48845" }}
+                        ml={2}
+                    >
+                        Book a Call
+                    </Button>
                 </Flex>
 
                 {/* Mobile Menu Button */}
@@ -206,6 +195,20 @@ export default function Navbar() {
 
                         <DrawerBody px={4} py={6}>
                             <VStack align="stretch" spacing={6}>
+                                <Button
+                                    as="a"
+                                    href={DUBSADO_LINK}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    bg="#F49953"
+                                    color="#FFFFFF"
+                                    fontWeight="700"
+                                    rounded="4px"
+                                    _hover={{ bg: "#e48845" }}
+                                    width="100%"
+                                >
+                                    Book a Call
+                                </Button>
                                 {navItems.map((item) => {
                                     if (item?.subItems) {
                                         return (
