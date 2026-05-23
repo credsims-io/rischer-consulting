@@ -1,5 +1,4 @@
 import { Box, Button, Flex, SimpleGrid, Text } from '@chakra-ui/react'
-import Image from 'next/image'
 import React from 'react'
 import AnimatedImage from '@/components/UI/AnimatedImage';
 
@@ -14,7 +13,7 @@ export default function Header() {
     return (
         <Box
             position="relative"
-            height={{ base: "560px", md: "642px" }}
+            minHeight={{ base: "520px", md: "600px" }}
             rounded={{ base: "16px", md: "24px" }}
             overflow="hidden"
             backgroundColor="#00000000"
@@ -52,12 +51,14 @@ export default function Header() {
             />
             <Flex
                 position="relative"
-                height="100%"
-                align={{ base: "start", md: "center" }}
+                py={{ base: 10, md: 14 }}
+                align="center"
+                justify="space-between"
                 px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
+                gap={{ base: 6, lg: 12 }}
                 zIndex={2}
             >
-                <Flex direction="column" zIndex={2} maxW="720px" gap={6}>
+                <Flex direction="column" zIndex={2} maxW={{ base: "100%", md: "560px" }} gap={5} flex="1">
                     <Flex
                         align="center"
                         gap={3}
@@ -67,20 +68,20 @@ export default function Header() {
                         py={2}
                         rounded="full"
                         width="fit-content"
-                        fontSize={{ base: "12px", md: "14px" }}
-                        letterSpacing="0.1em"
+                        fontSize={{ base: "12px", md: "13px" }}
+                        letterSpacing="0.08em"
                         textTransform="uppercase"
                     >
                         <Box width="8px" height="8px" bg="#F49953" rounded="full" />
-                        <Text color="#F5F7FF">World Cup 2026 Readiness</Text>
+                        <Text color="#F5F7FF">Certified M/WBE · EDWOSB · HUB · Since 2015</Text>
                     </Flex>
                     <Text
                         maxWidth="640px"
                         color="#FFFFFF"
-                        fontSize={{ base: "32px", md: "56px" }}
+                        fontSize={{ base: "28px", md: "44px", lg: "52px" }}
                         fontWeight="500"
                         letterSpacing={{ base: "0.5px", md: "1px" }}
-                        mt={{ base: 12, md: 0 }}
+                        mt={0}
                         lineHeight={{ base: "1.2", md: "1.15" }}
                         className='font-playfair'
                     >
@@ -98,7 +99,7 @@ export default function Header() {
                     <Text fontSize={{ base: "12px", md: "14px" }} color="rgba(255,255,255,0.75)" letterSpacing="0.05em">
                         Certified M/WBE · EDWOSB · HUB &nbsp;·&nbsp; Federal Grant Peer Reviewer, U.S. DOE &amp; U.S. DOL
                     </Text>
-                    <Flex mt={6} align='center' gap={4} wrap="wrap">
+                    <Flex mt={4} align='center' gap={4} wrap="wrap">
                         <Button
                             bg="#F49953"
                             paddingX={{ base: 4, md: 6 }}
@@ -131,26 +132,35 @@ export default function Header() {
                             Download Capabilities One-Pager
                         </Button>
                     </Flex>
-                    <SimpleGrid columns={{ base: 1, sm: heroStats.length }} spacing={{ base: 4, sm: 6 }}>
-                        {heroStats.map((stat) => (
-                            <Box
-                                key={stat.label}
-                                bg="rgba(255,255,255,0.08)"
-                                border="1px solid rgba(255,255,255,0.18)"
-                                rounded="12px"
-                                px={5}
-                                py={4}
-                            >
-                                <Text fontSize="28px" fontWeight="600" color="#FFFFFF">
-                                    {stat.value}
-                                </Text>
-                                <Text fontSize="14px" color="#E4E7EC">
-                                    {stat.label}
-                                </Text>
-                            </Box>
-                        ))}
-                    </SimpleGrid>
                 </Flex>
+
+                {/* Right: stats 2×2 */}
+                <SimpleGrid
+                    columns={2}
+                    spacing={3}
+                    display={{ base: "none", lg: "grid" }}
+                    flexShrink={0}
+                    width="300px"
+                >
+                    {heroStats.map((stat) => (
+                        <Box
+                            key={stat.label}
+                            bg="rgba(255,255,255,0.1)"
+                            border="1px solid rgba(255,255,255,0.2)"
+                            rounded="16px"
+                            px={5}
+                            py={5}
+                            backdropFilter="blur(4px)"
+                        >
+                            <Text fontSize="30px" fontWeight="700" color="#FFFFFF" lineHeight="1" className="font-playfair">
+                                {stat.value}
+                            </Text>
+                            <Text fontSize="13px" color="#D0D5DD" mt={1} lineHeight="1.3">
+                                {stat.label}
+                            </Text>
+                        </Box>
+                    ))}
+                </SimpleGrid>
             </Flex>
         </Box>
     )
