@@ -115,7 +115,7 @@ export default function CommunityHealthPage() {
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                     <Flex direction="column" gap={4}>
                         <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
-                            Rischer Consulting applies the same federal grant methodology that has secured $29M+ across sectors to the unique funding landscape of community health centers. We understand the compliance demands, the equity-reporting expectations, and the multi-funder coordination that CHCs face in ways that generalist grant writers don't.
+                            Rischer Consulting applies the same federal grant methodology that has secured $30M+ across sectors to the unique funding landscape of community health centers. We understand the compliance demands, the equity-reporting expectations, and the multi-funder coordination that CHCs face in ways that generalist grant writers don't.
                         </Text>
                         <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
                             Our principal is a Federal Grant Peer Reviewer for both the U.S. Department of Education and U.S. Department of Labor — which means we write to reviewer standards, not just funder guidelines. This inside-out perspective is what separates competitive submissions from also-rans.

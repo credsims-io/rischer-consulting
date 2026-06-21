@@ -34,7 +34,7 @@ export default function Welcome() {
 
                     <br />
                     <br />
-                    We have stewarded $29M+ in competitive grants across sectors, delivered 3× ROI for clients with us longer than a year, and trained 100K+ professionals. Our principal, Shaniqua Rischer, serves as a Federal Grant Peer Reviewer for the U.S. Departments of Education and Labor — meaning we evaluate applications by the same standard the government applies.
+                    We have stewarded $30M+ in competitive grants across sectors, delivered 3× ROI for clients with us longer than a year, and trained 100K+ professionals. Our principal, Shaniqua Rischer, serves as a Federal Grant Peer Reviewer for the U.S. Departments of Education and Labor — meaning we evaluate applications by the same standard the government applies.
 
                     <br />
                     <br />

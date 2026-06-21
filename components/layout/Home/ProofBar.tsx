@@ -1,7 +1,7 @@
 import { Flex, SimpleGrid, Text, Box } from "@chakra-ui/react";
 
 const tiles = [
-    { value: "$29M+", label: "Grants stewarded" },
+    { value: "$30M+", label: "Grants stewarded" },
     { value: "3×", label: "ROI for clients 1+ year" },
     { value: "100K+", label: "Professionals trained" },
     { value: "$19M+", label: "Annual revenue ops managed" },

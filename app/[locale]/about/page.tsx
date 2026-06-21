@@ -80,7 +80,7 @@ export default function AboutPage() {
                     lineHeight="1.7"
                     maxW="720px"
                 >
-                    Rischer Consulting is a federally-credentialed, certified M/WBE · EDWOSB · HUB grant-strategy and organizational capacity firm. Since 2015 we have stewarded $29M+ in competitive grants for education, workforce, international development, nonprofit, and — now — community health organizations.
+                    Rischer Consulting is a federally-credentialed, certified M/WBE · EDWOSB · HUB grant-strategy and organizational capacity firm. Since 2015 we have stewarded $30M+ in competitive grants for education, workforce, international development, nonprofit, and — now — community health organizations.
                 </Text>
             </Flex>
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                     </Flex>
                     <SimpleGrid columns={2} spacing={4}>
                         {[
-                            { value: "$29M+", label: "Competitive grants stewarded" },
+                            { value: "$30M+", label: "Competitive grants stewarded" },
                             { value: "3×", label: "Average ROI for retainer clients" },
                             { value: "100K+", label: "Professionals trained" },
                             { value: "10+", label: "Years in competitive grant markets" },
@@ -206,7 +206,7 @@ export default function AboutPage() {
                             Shaniqua Rischer brings 20+ years of public- and private-sector experience to every client engagement. As a Federal Grant Peer Reviewer for both the U.S. Department of Education and U.S. Department of Labor, she evaluates applications by the same standards federal reviewers apply — giving Rischer Consulting an inside-out understanding of what drives competitive submissions.
                         </Text>
                         <Text color="#475467" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.7">
-                            She and her team have stewarded $29M+ in competitive grants since 2015, serving education, workforce, nonprofit, international development, and faith-based organizations. Shaniqua holds a B.A. in Government from UT Austin and an M.A. in Christian Education from Dallas Baptist University. She is also a published author of four books and the founder of At The Cross Global Ministries.
+                            She and her team have stewarded $30M+ in competitive grants since 2015, serving education, workforce, nonprofit, international development, and faith-based organizations. Shaniqua holds a B.A. in Government from UT Austin and an M.A. in Christian Education from Dallas Baptist University. She is also a published author of four books and the founder of At The Cross Global Ministries.
                         </Text>
                         <Flex gap={3} wrap="wrap" mt={1}>
                             {["Federal Grant Peer Reviewer", "U.S. DOE", "U.S. DOL", "Published Author", "Speaker"].map((tag) => (
@@ -273,19 +273,7 @@ export default function AboutPage() {
                                 <Flex align="center" gap={4} mb={4}>
                                     {cert.badge ? (
                                         <Image src={cert.badge} alt={cert.label} width={cert.badgeSize} height={cert.badgeSize} style={{ objectFit: "contain" }} />
-                                    ) : (
-                                        <Box
-                                            width={`${cert.badgeSize}px`}
-                                            height={`${cert.badgeSize}px`}
-                                            border="2px dashed #EAECF0"
-                                            rounded="8px"
-                                            display="flex"
-                                            alignItems="center"
-                                            justifyContent="center"
-                                        >
-                                            <Text fontSize="10px" color="#98A2B3" textAlign="center" px={1}>Badge<br />coming soon</Text>
-                                        </Box>
-                                    )}
+                                    ) : null}
                                     <Box>
                                         <Box
                                             display="inline-block"
@@ -333,7 +321,7 @@ export default function AboutPage() {
                         <strong>U.S. Department of Labor</strong>. This credential means Rischer Consulting
                         evaluates applications by the same standards federal reviewers apply — giving clients an
                         inside-out understanding of what makes a competitive grant submission. With{" "}
-                        <strong>$29M+ secured</strong> for clients since 2015, this review-side expertise is a
+                        <strong>$30M+ secured</strong> for clients since 2015, this review-side expertise is a
                         direct driver of our funding success rate.
                     </Text>
                 </Box>

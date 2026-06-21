@@ -5,7 +5,7 @@ import GrantWinsFilter from "@/components/layout/GrantWinsFilter";
 
 export const metadata: Metadata = {
     title: "Grant Wins | Rischer Consulting",
-    description: "$29M+ in competitive grants stewarded since 2015 across education, housing, workforce, food security, capacity building, arts, and health.",
+    description: "$30M+ in competitive grants stewarded since 2015 across education, housing, workforce, food security, capacity building, arts, and health.",
 };
 
 const DUBSADO_LINK = "https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule";
@@ -43,7 +43,7 @@ export default function GrantWinsPage() {
                     className="font-playfair"
                     lineHeight="1.15"
                 >
-                    $29M+ stewarded in competitive grants
+                    $30M+ stewarded in competitive grants
                 </Text>
                 <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7" maxW="640px">
                     Across education, housing, workforce, food security, capacity building, arts, and health — a track record built on federal rigor, equity-centered strategy, and 10+ years in competitive grant markets.
@@ -62,7 +62,7 @@ export default function GrantWinsPage() {
                     $10,281,520
                 </Text>
                 <Text color="#D0D5DD" fontSize={{ base: "15px", md: "18px" }} mt={3} maxW="560px" mx="auto" lineHeight="1.6">
-                    Documented across seven sectors. Full $29M+ history spans 2015–present. Individual grant cards are being compiled — check back soon.
+                    Documented across seven sectors. Full $30M+ history spans 2015–present. Individual grant cards are being compiled — check back soon.
                 </Text>
                 <Button
                     as="a"
@@ -85,7 +85,7 @@ export default function GrantWinsPage() {
             <Box border="1px solid #EAECF0" rounded="16px" p={6} bg="#F9FAFB">
                 <Text fontWeight="700" color="#121212" mb={2}>About this data</Text>
                 <Text color="#667085" fontSize="15px" lineHeight="1.65">
-                    The sector summary above represents a curated sample of Rischer Consulting&apos;s funded grant portfolio. Total grants stewarded since 2015 exceed $29M across all clients and sectors. Individual grant win cards — including funder name, award amount, client type, and outcome — are in final review and will be published here shortly.
+                    The sector summary above represents a curated sample of Rischer Consulting&apos;s funded grant portfolio. Total grants stewarded since 2015 exceed $30M across all clients and sectors. Individual grant win cards — including funder name, award amount, client type, and outcome — are in final review and will be published here shortly.
                 </Text>
             </Box>
 
