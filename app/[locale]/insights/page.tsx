@@ -100,7 +100,7 @@ export default function InsightsPage() {
             </Flex>
 
             {/* CTA */}
-            <Box border="1px solid #EAECF0" rounded="24px" p={{ base: 8, md: 12 }} bg="#FEF4EC" maxW="680px">
+            <Box border="1px solid #EAECF0" rounded="24px" p={{ base: 8, md: 12 }} bg="#FEF4EC">
                 <Text fontSize={{ base: "22px", md: "28px" }} fontWeight="500" className="font-playfair" color="#121212" mb={3}>
                     Ready to put these insights to work?
                 </Text>
