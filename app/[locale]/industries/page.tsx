@@ -74,7 +74,7 @@ export default function IndustriesPage() {
                     Industries We Serve
                 </Text>
                 <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7">
-                    $29M+ in competitive grants stewarded across five sectors since 2015. Every industry we enter, we enter with deep domain knowledge and a federal reviewer's understanding of what wins.
+                    $30M+ in competitive grants stewarded across five sectors since 2015. Every industry we enter, we enter with deep domain knowledge and a federal reviewer's understanding of what wins.
                 </Text>
             </Flex>
 

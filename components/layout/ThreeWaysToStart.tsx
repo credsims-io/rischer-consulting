@@ -20,8 +20,8 @@ const tiers = [
     {
         label: "PROJECT",
         name: "Grant Writing Engagement",
-        price: "$25K–$60K",
-        timeline: "8–12 weeks",
+        price: "$15K–$60K",
+        timeline: "3–12 months",
         bullets: [
             "Full proposal development",
             "Needs assessment & logic model",

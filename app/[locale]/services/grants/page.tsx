@@ -43,7 +43,7 @@ export default function GrantsPage() {
                     className="font-playfair"
                     lineHeight="1.15"
                 >
-                    $29M+ secured. We know what reviewers want.
+                    $30M+ secured. We know what reviewers want.
                 </Text>
                 <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7">
                     Rischer Consulting's principal is a Federal Grant Peer Reviewer for both the U.S. Department of Education and U.S. Department of Labor. Every proposal we write is reviewed against the same standards federal reviewers apply — because our lead consultant is one.

@@ -3,7 +3,7 @@ import React from 'react'
 import AnimatedImage from '@/components/UI/AnimatedImage';
 
 const heroStats = [
-    { value: "$29M+", label: "Grants stewarded since 2015" },
+    { value: "$30M+", label: "Grants stewarded since 2015" },
     { value: "3×", label: "ROI for clients 1+ year" },
     { value: "100K+", label: "Professionals trained" },
     { value: "25+", label: "Years Fortune 500 strategy" },
@@ -94,7 +94,7 @@ export default function Header() {
                         mt={2}
                         maxW="600px"
                     >
-                        $29M+ stewarded across education, workforce, international development, nonprofit — and now extending into community health.
+                        $30M+ stewarded across education, workforce, international development, nonprofit — and now extending into community health.
                     </Text>
                     <Text fontSize={{ base: "12px", md: "14px" }} color="rgba(255,255,255,0.75)" letterSpacing="0.05em">
                         Certified M/WBE · EDWOSB · HUB &nbsp;·&nbsp; Federal Grant Peer Reviewer, U.S. DOE &amp; U.S. DOL

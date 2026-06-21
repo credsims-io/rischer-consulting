@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Text } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
     title: "Insights | Rischer Consulting",
@@ -7,6 +7,16 @@ export const metadata: Metadata = {
 };
 
 const DUBSADO_LINK = "https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule";
+
+const newsletters = [
+    { month: "May 2026", url: "https://mailchi.mp/6f6ba73ec487/are-you-grant-ready-for-8339441" },
+    { month: "April 2026", url: "https://mailchi.mp/21023b40c3b4/are-you-grant-ready-for-8339001" },
+    { month: "March 2026", url: "https://mailchi.mp/b5708dafdcdc/are-you-grant-ready-for-8338621" },
+    { month: "February 2026", url: "https://mailchi.mp/26c9dc087ff5/are-you-grant-ready-for-8337937" },
+    { month: "January 2026", url: "https://mailchi.mp/a11d4eb68465/are-you-grant-ready-for-8337734" },
+    { month: "December 2025", url: "https://mailchi.mp/4beb7e3ff118/are-you-grant-ready-for-8337049" },
+    { month: "November 2025", url: "https://mailchi.mp/6fa37438dbc5/are-you-grant-ready-for-8336638" },
+];
 
 export default function InsightsPage() {
     return (
@@ -32,15 +42,70 @@ export default function InsightsPage() {
                 </Text>
             </Flex>
 
+            {/* Newsletter Archive */}
+            <Flex direction="column" gap={6}>
+                <Flex direction="column" gap={1}>
+                    <Text fontSize="12px" color="#F49953" fontWeight="700" letterSpacing="0.15em" textTransform="uppercase">
+                        Newsletter Archive
+                    </Text>
+                    <Text fontSize={{ base: "24px", md: "32px" }} fontWeight="500" className="font-playfair" color="#121212">
+                        Are You Grant Ready?
+                    </Text>
+                    <Text color="#667085" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.65" maxW="560px">
+                        Monthly insights on grant strategy, sector funding trends, and organizational capacity building — straight from our principal's desk.
+                    </Text>
+                </Flex>
+
+                <Grid templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={4}>
+                    {newsletters.map((item) => (
+                        <Box
+                            key={item.month}
+                            as="a"
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            border="1px solid #EAECF0"
+                            rounded="20px"
+                            p={6}
+                            bg="#FFFFFF"
+                            display="flex"
+                            flexDirection="column"
+                            gap={3}
+                            _hover={{ borderColor: "#F49953", shadow: "sm", textDecoration: "none" }}
+                            transition="all 0.15s"
+                        >
+                            <Box
+                                display="inline-block"
+                                px={2}
+                                py={1}
+                                bg="#F5F7E9"
+                                color="#879037"
+                                fontSize="11px"
+                                fontWeight="700"
+                                rounded="4px"
+                                letterSpacing="0.08em"
+                                width="fit-content"
+                            >
+                                NEWSLETTER
+                            </Box>
+                            <Text fontSize="20px" fontWeight="600" color="#121212" className="font-playfair">
+                                {item.month}
+                            </Text>
+                            <Text fontSize="13px" color="#F49953" fontWeight="700">
+                                Read →
+                            </Text>
+                        </Box>
+                    ))}
+                </Grid>
+            </Flex>
+
+            {/* CTA */}
             <Box border="1px solid #EAECF0" rounded="24px" p={{ base: 8, md: 12 }} bg="#FEF4EC" maxW="680px">
-                <Text fontSize="13px" color="#F49953" fontWeight="700" letterSpacing="0.15em" textTransform="uppercase" mb={3}>
-                    Coming Soon
-                </Text>
                 <Text fontSize={{ base: "22px", md: "28px" }} fontWeight="500" className="font-playfair" color="#121212" mb={3}>
-                    Articles and resources are being prepared
+                    Ready to put these insights to work?
                 </Text>
                 <Text color="#667085" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.65" mb={6}>
-                    We&apos;re publishing posts from our newsletter archive on grant strategy, sector funding trends, and organizational capacity building. Check back soon — or subscribe below to be notified when new content is available.
+                    Schedule a capabilities conversation to see how Rischer Consulting can move your organization's funding strategy forward.
                 </Text>
                 <Button
                     as="a"
@@ -53,7 +118,7 @@ export default function InsightsPage() {
                     rounded="8px"
                     _hover={{ opacity: 0.9 }}
                 >
-                    Talk to Us in the Meantime
+                    Schedule a Conversation
                 </Button>
             </Box>
         </Flex>

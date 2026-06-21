@@ -9,7 +9,7 @@ const strategicCore = [
         name: "Shaniqua Rischer, CEO",
         title: "Program Architect | Grant Funding Expert",
         highlights: [
-            "$29M+ secured for clients since 2015",
+            "$30M+ secured for clients since 2015",
             "Federal Grant Peer Reviewer (U.S. Dept. of Education & Labor)",
             "Created The Color of Opportunity™ economic model",
             "Global experience: Kenya, Ghana, Gambia, Haiti, Dominican Republic"
