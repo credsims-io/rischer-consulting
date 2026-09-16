@@ -59,10 +59,10 @@ export default function GrantWinsPage() {
                     Total Impact — Featured Sector Summary
                 </Text>
                 <Text fontSize={{ base: "48px", md: "72px" }} fontWeight="700" color="#FFFFFF" className="font-playfair" lineHeight="1">
-                    $10,281,520
+                    $11,290,905.44
                 </Text>
                 <Text color="#D0D5DD" fontSize={{ base: "15px", md: "18px" }} mt={3} maxW="560px" mx="auto" lineHeight="1.6">
-                    Documented across seven sectors. Full $30M+ history spans 2015–present. Individual grant cards are being compiled — check back soon.
+                    67 grants documented across seven sectors. Full $30M+ history spans 2015–present. Individual grant cards are being compiled — check back soon.
                 </Text>
                 <Button
                     as="a"
