@@ -26,7 +26,7 @@ const frameworkSteps = [
     {
         step: "03",
         name: "Deliver",
-        description: "Our team writes, manages, and submits compelling proposals — from federal applications to foundation grants. Every submission is reviewed against the same standards our principal uses as a U.S. DOE & DOL peer reviewer.",
+        description: "Our team writes, manages, and submits compelling proposals — from federal applications to foundation grants. Every submission is reviewed against the same standards our principal applied as a U.S. DOE & DOL peer reviewer.",
     },
     {
         step: "04",
@@ -102,10 +102,10 @@ export default function AboutPage() {
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                     <Flex direction="column" gap={4}>
                         <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
-                            Rischer Consulting was founded on a clear conviction: access to competitive grant funding should not be limited by an organization's size or sophistication. Too many mission-driven organizations close their doors — not because their work lacks value, but because they lack the systems to fund it.
+                            Rischer Consulting was founded on a clear conviction: the strength of an organization&apos;s mission should never be limited by the systems behind it. Too many mission-driven organizations stall — or close their doors — not because their work lacks value, but because they lack the strategy, funding, and leadership to sustain it.
                         </Text>
                         <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7">
-                            We bridge that gap. As a federally-credentialed firm, we bring rigor, equity-centered strategy, and 25+ years of cross-sector leadership experience to every engagement. Our clients don't just win grants — they build the organizational capacity to sustain their impact for years to come.
+                            We bridge that gap. As a federally-credentialed firm, we bring rigor, equity-centered strategy, and 25+ years of cross-sector leadership experience to every engagement — from grant writing and funding strategy to coaching and strategic planning, leadership development, and organizational capacity building. Our clients don&apos;t just win grants. They build the strategy, the systems, and the leadership to sustain their impact for years to come.
                         </Text>
                     </Flex>
                     <SimpleGrid columns={2} spacing={4}>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 </SimpleGrid>
             </Flex>
 
-            {/* Color of Opportunity™ Framework */}
+            {/* Rischer Consulting's Tenets of Grant Writing */}
             <Box bg="#121212" py={{ base: 10, md: 16 }}>
                 <Flex
                     direction="column"
@@ -146,7 +146,7 @@ export default function AboutPage() {
                             className="font-playfair"
                             color="#FFFFFF"
                         >
-                            The Color of Opportunity™
+                            Rischer Consulting&apos;s Tenets of Grant Writing
                         </Text>
                         <Text color="#D0D5DD" fontSize={{ base: "15px", md: "17px" }} maxW="640px">
                             A four-phase methodology that turns funding potential into funded reality — built on the same standards used by federal grant peer reviewers.
@@ -169,6 +169,47 @@ export default function AboutPage() {
                     </Grid>
                 </Flex>
             </Box>
+
+            {/* The Color of Opportunity™ */}
+            <Flex
+                direction="column"
+                gap={6}
+                px={{ base: "10px", md: "80px", lg: "115px", xl: "128px", "2xl": "10%" }}
+            >
+                <Box bg="#F5F7E9" rounded="24px" p={{ base: 6, md: 10 }}>
+                    <Text fontSize="12px" color="#879037" fontWeight="700" letterSpacing="0.15em" textTransform="uppercase" mb={2}>
+                        Our Second Framework
+                    </Text>
+                    <Text
+                        as="h2"
+                        fontSize={{ base: "28px", md: "40px" }}
+                        fontWeight="500"
+                        className="font-playfair"
+                        color="#121212"
+                        mb={3}
+                    >
+                        The Color of Opportunity™
+                    </Text>
+                    <Text color="#475467" fontSize={{ base: "17px", md: "20px" }} fontWeight="600" lineHeight="1.6" mb={4} maxW="760px">
+                        The Color of Opportunity™ — culturally responsive business and workforce development, built for the people traditional models leave out.
+                    </Text>
+                    <Text color="#475467" fontSize={{ base: "16px", md: "18px" }} lineHeight="1.7" maxW="760px">
+                        The Color of Opportunity™ is Rischer Consulting&apos;s culturally responsive framework for building businesses and the workforce that powers them. Designed for women, women of color, and economically disadvantaged entrepreneurs, it pairs real business acumen with mentorship and experiential learning — so opportunity isn&apos;t determined by race, gender, or zip code.
+                    </Text>
+                    <Button
+                        as="a"
+                        href="/color-of-opportunity"
+                        bg="#121212"
+                        color="#FFFFFF"
+                        fontWeight="700"
+                        rounded="8px"
+                        mt={6}
+                        _hover={{ opacity: 0.9 }}
+                    >
+                        Explore The Color of Opportunity™
+                    </Button>
+                </Box>
+            </Flex>
 
             {/* Who We Are — Shaniqua */}
             <Flex
@@ -203,13 +244,13 @@ export default function AboutPage() {
                             </Text>
                         </Box>
                         <Text color="#475467" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.7">
-                            Shaniqua Rischer brings 20+ years of public- and private-sector experience to every client engagement. As a Federal Grant Peer Reviewer for both the U.S. Department of Education and U.S. Department of Labor, she evaluates applications by the same standards federal reviewers apply — giving Rischer Consulting an inside-out understanding of what drives competitive submissions.
+                            Shaniqua Rischer brings 20+ years of public- and private-sector experience to every client engagement. Having served as a Federal Grant Peer Reviewer for both the U.S. Department of Education and U.S. Department of Labor, she evaluates applications by the same standards federal reviewers apply — giving Rischer Consulting an inside-out understanding of what drives competitive submissions.
                         </Text>
                         <Text color="#475467" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.7">
                             She and her team have stewarded $30M+ in competitive grants since 2015, serving education, workforce, nonprofit, international development, and faith-based organizations. Shaniqua holds a B.A. in Government from UT Austin and an M.A. in Christian Education from Dallas Baptist University. She is also a published author of four books and the founder of At The Cross Global Ministries.
                         </Text>
                         <Flex gap={3} wrap="wrap" mt={1}>
-                            {["Federal Grant Peer Reviewer", "U.S. DOE", "U.S. DOL", "Published Author", "Speaker"].map((tag) => (
+                            {["Former Federal Grant Peer Reviewer", "U.S. DOE", "U.S. DOL", "Published Author", "Speaker"].map((tag) => (
                                 <Box
                                     key={tag}
                                     px={3}
@@ -312,17 +353,17 @@ export default function AboutPage() {
                     fontWeight="500"
                     className="font-playfair"
                 >
-                    Federal Grant Reviewer Credentials
+                    Federal Grant Reviewer
                 </Text>
                 <Box border="1px solid #EAECF0" rounded="24px" p={{ base: 6, md: 10 }} bg="#FFFFFF">
                     <Text color="#667085" fontSize={{ base: "16px", md: "20px" }} lineHeight="1.7" maxW="760px">
-                        Shaniqua Rischer serves as a <strong>Federal Grant Peer Reviewer</strong> for both the{" "}
+                        Shaniqua Rischer has served as a <strong>Federal Grant Peer Reviewer</strong> for both the{" "}
                         <strong>U.S. Department of Education</strong> and the{" "}
-                        <strong>U.S. Department of Labor</strong>. This credential means Rischer Consulting
+                        <strong>U.S. Department of Labor</strong>. This means Rischer Consulting
                         evaluates applications by the same standards federal reviewers apply — giving clients an
                         inside-out understanding of what makes a competitive grant submission. With{" "}
-                        <strong>$30M+ secured</strong> for clients since 2015, this review-side expertise is a
-                        direct driver of our funding success rate.
+                        <strong>$30M+ secured</strong> for clients since 2015, this review-side expertise
+                        directly drives our funding success rate.
                     </Text>
                 </Box>
             </Flex>

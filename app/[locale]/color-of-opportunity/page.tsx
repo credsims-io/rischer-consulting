@@ -4,60 +4,33 @@ import ThreeWaysToStart from "@/components/layout/ThreeWaysToStart";
 
 export const metadata: Metadata = {
     title: "The Color of Opportunity™ | Rischer Consulting",
-    description: "Rischer Consulting's four-phase grant strategy methodology: Diagnose · Design · Deliver · Document.",
+    description: "Rischer Consulting's culturally responsive framework for building businesses and the workforce that powers them — designed for women, women of color, and economically disadvantaged entrepreneurs.",
 };
 
 const DUBSADO_LINK = "https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule";
 
-const phases = [
+const pillars = [
     {
-        step: "01",
-        name: "Diagnose",
+        name: "Business Acumen",
         color: "#879037",
-        description: "We start with a thorough funding landscape assessment and organizational readiness scorecard. This phase identifies your competitive position, uncovers funding gaps, and maps priority funders ranked by fit, deadline, and competitive advantage.",
-        deliverables: [
-            "Funding landscape assessment",
-            "Organizational readiness scorecard",
-            "Priority funder map",
-            "Funding gap analysis",
-        ],
+        description: "Real, practical business fundamentals — financial literacy, operations, and growth strategy — taught in a way that's grounded in the lived realities of the entrepreneurs building them.",
     },
     {
-        step: "02",
-        name: "Design",
+        name: "Mentorship",
         color: "#F49953",
-        description: "We build a customized grant strategy, logic model, and proposal architecture aligned to your mission, budget, and capacity. Every application is structurally sound and competitive before the first word is drafted.",
-        deliverables: [
-            "Grant strategy roadmap",
-            "Logic model and theory of change",
-            "Proposal architecture",
-            "Budget narrative framework",
-        ],
+        description: "Direct access to experienced guides who share not just advice, but the relationships and know-how that traditional programs rarely extend to entrepreneurs outside the mainstream pipeline.",
     },
     {
-        step: "03",
-        name: "Deliver",
+        name: "Experiential Learning",
         color: "#121212",
-        description: "Our team writes, manages, and submits compelling proposals — from federal applications to foundation grants. Every submission is reviewed against the standards our principal uses as a U.S. DOE & DOL Federal Grant Peer Reviewer.",
-        deliverables: [
-            "Complete proposal development",
-            "Federal peer reviewer pre-submission review",
-            "Compliance and eligibility verification",
-            "Submission and confirmation documentation",
-        ],
+        description: "Learning by doing — hands-on workforce and business-building experiences that build confidence and capability alongside credentials.",
     },
-    {
-        step: "04",
-        name: "Document",
-        color: "#879037",
-        description: "We track outcomes, manage compliance, and produce the reporting that positions you for the next round of funding. Each grant cycle becomes an organizational asset rather than a burden.",
-        deliverables: [
-            "Post-award reporting support",
-            "Compliance management and audit prep",
-            "Outcome tracking and data documentation",
-            "Portfolio narrative for future applications",
-        ],
-    },
+];
+
+const audience = [
+    "Women entrepreneurs",
+    "Women of color",
+    "Economically disadvantaged entrepreneurs",
 ];
 
 export default function ColorOfOpportunityPage() {
@@ -75,7 +48,7 @@ export default function ColorOfOpportunityPage() {
                     display="inline-block"
                     px={3}
                     py={1}
-                    bg="#F49953"
+                    bg="#879037"
                     color="#FFFFFF"
                     fontSize="12px"
                     fontWeight="700"
@@ -83,7 +56,7 @@ export default function ColorOfOpportunityPage() {
                     letterSpacing="0.1em"
                     width="fit-content"
                 >
-                    OUR METHODOLOGY
+                    OUR FRAMEWORK
                 </Box>
                 <Text
                     as="h1"
@@ -95,76 +68,78 @@ export default function ColorOfOpportunityPage() {
                 >
                     The Color of Opportunity™
                 </Text>
-                <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7" maxW="680px">
-                    A four-phase grant strategy methodology built on the same standards used by federal grant peer reviewers — designed to turn funding potential into funded reality, and funded programs into sustainable organizations.
+                <Text color="#667085" fontSize={{ base: "20px", md: "24px" }} fontWeight="600" lineHeight="1.5" maxW="760px">
+                    Culturally responsive business and workforce development, built for the people traditional models leave out.
+                </Text>
+                <Text color="#667085" fontSize={{ base: "17px", md: "20px" }} lineHeight="1.7" maxW="720px">
+                    The Color of Opportunity™ is Rischer Consulting&apos;s culturally responsive framework for building businesses and the workforce that powers them. Designed for women, women of color, and economically disadvantaged entrepreneurs, it pairs real business acumen with mentorship and experiential learning — so opportunity isn&apos;t determined by race, gender, or zip code.
                 </Text>
             </Flex>
 
-            {/* Framework Overview */}
-            <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
-                {phases.map((phase) => (
-                    <Box
-                        key={phase.step}
-                        border="1px solid #EAECF0"
-                        rounded="20px"
-                        p={{ base: 6, md: 8 }}
-                        bg="#FFFFFF"
-                    >
-                        <Flex align="center" gap={3} mb={4}>
-                            <Box
-                                width="44px"
-                                height="44px"
-                                bg={phase.color}
-                                rounded="12px"
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                flexShrink={0}
-                            >
-                                <Text color="#FFFFFF" fontWeight="800" fontSize="14px">{phase.step}</Text>
-                            </Box>
-                            <Text fontSize="26px" fontWeight="600" className="font-playfair" color="#121212">
-                                {phase.name}
+            {/* Pillars */}
+            <Flex direction="column" gap={8}>
+                <Text
+                    as="h2"
+                    fontSize={{ base: "24px", md: "32px" }}
+                    fontWeight="500"
+                    className="font-playfair"
+                    color="#121212"
+                >
+                    Built on three pillars
+                </Text>
+                <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
+                    {pillars.map((pillar) => (
+                        <Box
+                            key={pillar.name}
+                            border="1px solid #EAECF0"
+                            rounded="20px"
+                            p={{ base: 6, md: 8 }}
+                            bg="#FFFFFF"
+                        >
+                            <Box width="44px" height="44px" bg={pillar.color} rounded="12px" mb={4} />
+                            <Text fontSize="22px" fontWeight="600" className="font-playfair" color="#121212" mb={3}>
+                                {pillar.name}
                             </Text>
-                        </Flex>
-                        <Text color="#475467" fontSize={{ base: "15px", md: "16px" }} lineHeight="1.7" mb={5}>
-                            {phase.description}
-                        </Text>
-                        <Box borderTop="1px solid #EAECF0" pt={4}>
-                            <Text fontSize="12px" fontWeight="700" color="#98A2B3" letterSpacing="0.1em" textTransform="uppercase" mb={3}>
-                                Key Deliverables
+                            <Text fontSize={{ base: "15px", md: "16px" }} color="#475467" lineHeight="1.7">
+                                {pillar.description}
                             </Text>
-                            <Flex direction="column" gap={2}>
-                                {phase.deliverables.map((d) => (
-                                    <Flex key={d} align="flex-start" gap={2}>
-                                        <Box mt="6px" width="5px" height="5px" minW="5px" bg={phase.color} rounded="full" />
-                                        <Text fontSize="14px" color="#475467">{d}</Text>
-                                    </Flex>
-                                ))}
-                            </Flex>
                         </Box>
-                    </Box>
-                ))}
-            </Grid>
+                    ))}
+                </Grid>
+            </Flex>
 
-            {/* Why it works */}
+            {/* Who it's for */}
             <Box bg="#121212" rounded="24px" p={{ base: 8, md: 12 }}>
                 <Text fontSize="12px" color="#F49953" fontWeight="700" letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                    The Difference
+                    Who It&apos;s For
                 </Text>
                 <Text
                     fontSize={{ base: "22px", md: "32px" }}
                     fontWeight="500"
                     className="font-playfair"
                     color="#FFFFFF"
-                    mb={4}
+                    mb={6}
                     maxW="640px"
                 >
-                    Written to federal reviewer standards — because our principal reviews federal grants.
+                    Opportunity shouldn&apos;t be determined by race, gender, or zip code.
                 </Text>
-                <Text color="#D0D5DD" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.7" maxW="680px" mb={6}>
-                    Shaniqua Rischer serves as a Federal Grant Peer Reviewer for both the U.S. Department of Education and the U.S. Department of Labor. The Color of Opportunity™ methodology was built on that inside knowledge — writing to the criteria reviewers actually score, not just the criteria funders publish.
-                </Text>
+                <Flex gap={3} wrap="wrap" mb={8}>
+                    {audience.map((tag) => (
+                        <Box
+                            key={tag}
+                            px={4}
+                            py={2}
+                            bg="rgba(255,255,255,0.08)"
+                            border="1px solid rgba(255,255,255,0.12)"
+                            color="#FFFFFF"
+                            fontSize="14px"
+                            fontWeight="600"
+                            rounded="20px"
+                        >
+                            {tag}
+                        </Box>
+                    ))}
+                </Flex>
                 <Button
                     as="a"
                     href={DUBSADO_LINK}
@@ -177,7 +152,7 @@ export default function ColorOfOpportunityPage() {
                     rounded="8px"
                     _hover={{ opacity: 0.9 }}
                 >
-                    Apply This Methodology to Your Grant
+                    Bring The Color of Opportunity™ to Your Community
                 </Button>
             </Box>
 

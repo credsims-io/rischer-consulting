@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 const DUBSADO_LINK = "https://portal.rischerconsulting.com/public/appointment-scheduler/67c873f6bb8b19003a64d1d4/schedule";
 
 const newsletters = [
+    { month: "August 2026", url: "http://eepurl.com/Q8hM-HNoQH" },
+    { month: "July 2026", url: "https://mailchi.mp/rischerconsulting/july-2026-newsletter-8340453" },
     { month: "May 2026", url: "https://mailchi.mp/6f6ba73ec487/are-you-grant-ready-for-8339441" },
     { month: "April 2026", url: "https://mailchi.mp/21023b40c3b4/are-you-grant-ready-for-8339001" },
     { month: "March 2026", url: "https://mailchi.mp/b5708dafdcdc/are-you-grant-ready-for-8338621" },
@@ -49,10 +51,10 @@ export default function InsightsPage() {
                         Newsletter Archive
                     </Text>
                     <Text fontSize={{ base: "24px", md: "32px" }} fontWeight="500" className="font-playfair" color="#121212">
-                        Are You Grant Ready?
+                        Are You Growth Ready?
                     </Text>
                     <Text color="#667085" fontSize={{ base: "15px", md: "17px" }} lineHeight="1.65" maxW="560px">
-                        Monthly insights on grant strategy, sector funding trends, and organizational capacity building — straight from our principal's desk.
+                        Monthly insights on the philanthropic community, economic and workforce development, funding strategy, leadership development, and organizational capacity building — straight from our principal&apos;s desk.
                     </Text>
                 </Flex>
 

@@ -17,13 +17,13 @@ const sectors = [
 ];
 
 const sectorSummary = [
-    { sector: "education", label: "Education & Youth Development", amount: "$1,507,500", color: "#879037" },
-    { sector: "housing", label: "Housing", amount: "$4,978,981", color: "#121212" },
-    { sector: "food", label: "Food & Nutrition", amount: "$927,000", color: "#F49953" },
-    { sector: "workforce", label: "Workforce Development", amount: "$988,685", color: "#879037" },
-    { sector: "operations", label: "Operations & Capacity Building", amount: "$1,117,061", color: "#121212" },
-    { sector: "arts", label: "Arts, Culture & Public Space", amount: "$390,166", color: "#F49953" },
-    { sector: "health", label: "Health & Wellness", amount: "$372,127", color: "#879037" },
+    { sector: "education", label: "Education & Youth Development", amount: "$1,507,500", grants: 11, percent: "13.4%", color: "#879037" },
+    { sector: "housing", label: "Housing", amount: "$5,723,366", grants: 15, percent: "50.7%", color: "#121212" },
+    { sector: "food", label: "Food & Nutrition", amount: "$927,000", grants: 8, percent: "8.2%", color: "#F49953" },
+    { sector: "workforce", label: "Workforce Development", amount: "$1,253,685", grants: 13, percent: "11.1%", color: "#879037" },
+    { sector: "operations", label: "Operations & Capacity Building", amount: "$1,117,061", grants: 13, percent: "9.9%", color: "#121212" },
+    { sector: "arts", label: "Arts, Culture & Public Space", amount: "$390,166.44", grants: 6, percent: "3.5%", color: "#F49953" },
+    { sector: "health", label: "Health & Wellness", amount: "$372,127", grants: 5, percent: "3.3%", color: "#879037" },
 ];
 
 export default function GrantWinsFilter() {
@@ -80,7 +80,7 @@ export default function GrantWinsFilter() {
                             {item.amount}
                         </Text>
                         <Text fontSize="14px" color="#667085" mt={1}>
-                            Competitive grants secured
+                            {item.grants} grants secured · {item.percent} of portfolio
                         </Text>
                     </Box>
                 ))}
